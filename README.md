@@ -6,139 +6,126 @@
 
 Manage the imperial legitimacy system at any time through the *Advanced Options tab*.
 
-### Features
+## Imperial System
 
 - Add any faction to the Imperial legitimacy system.
-- Dynamically set one faction to be the most legitimate.
-- Instantly integrate the chosen faction into the most legitimate one (no need to kill leaders or capture planets).
-- Reset the legitimacy values.
-- Unlock random legitimacy group heroes on demand.
-- Cheat: Start Dark Empire as any faction (any time before era 5).
-- Always see the Imperial legitimacy stats in the government display.
-- Legitimacy groups are transferred when their faction is integrated.
-- Hero fighters and hero upgrades become available when their faction is integrated.
+- Dynamically set one of the factions to be the most legitimate or reset values.
+- Instantly integrate the chosen faction into the most legitimate one, without needing to kill leaders or capture planets.
+- Always see the Imperial legitimacy stats in the (gold) government display (EotH uses silver).
+- Hero fighters and hero upgrades are available when their faction is integrated.
+- Cheat: Start dark empire as any faction, any time before era 5.
+- Cheat: Instantly unlock all research tech for eligible factions.
 
-### Integration Rewards
+## Legitimacy Group Selector
 
-Each faction has up to one space reward per shipyard tier (light, heavy, capital, dreadnought, SSD)
+- Toggle between random (default) and selectable group modes for finer control.
+- Legitimacy group rewards are transferred when a faction is integrated.
+
+**Random mode:**
+- Unlock random legitimacy group heroes/rewards on demand.
+- Options are: x1 or x10 for the most legitimate faction, and x1 for yourself.
+
+**Selectable mode:**
+- Pick and choose specific groups to unlock from one of the tiers.
+- This prevents the AI from receiving legitimacy groups.
+
+## Integration Rewards
+
+Each Imperial faction has roughly one space reward per shipyard tier (light, heavy, capital, dreadnought, SSD)
 and one ground reward per factory tier (barracks, light, heavy, advanced).
 
-#### Galactic Empire
+### Space Rewards
 
+**Galactic Empire**
 - Vindicator Heavy Cruiser
+- Lancer Frigate
+- Interdictor Star Destroyer
 - Impellor Carrier
 - Compellor Battlecruiser
-- Stormtrooper Platoon
-- AT-ST Walker Company
-- "Deathhawk" Combat Airspeeder Wing
-- AT-AT Walker Company
 
-#### Pentastar Alignment
-
+**Pentastar Alignment**
+- Victory-II Frigate
 - Venator Star Destroyer
 - Secutor Star Destroyer
 - Praetor Carrier Battlecruiser
 - Mandator-III Star Dreadnought
-- Enforcer Trooper Platoon
-- AT-DP Walker Company
-- TIE Crawler Company
-- C-10 Siege Tower
 
-#### Greater Maldrood
-
+**Greater Maldrood**
+- Customs Light Corvette
 - Crimson Victory-II Star Destroyer
+- Broadside Cruiser
 - Tector Star Destroyer
 - Altor Replenishment Ship
 - Bellator Star Dreadnought
+
+**Zsinj's Empire**
+- Vengeance Frigate
+- Dragon Heavy Cruiser
+- Aggressor Star Destroyer
+- Sorannan Star Destroyer
+- Vengeance Star Dreadnought
+
+**Eriadu Authority**
+- Arquitens Light Cruiser
+- Gladiator-I Star Destroyer
+- Torpedo Sphere
+- Praetor-II Battlecruiser
+- Assertor Star Dreadnought
+
+**Minor Warlords**
+- Executor Star Dreadnought
+
+**Corporate Sector Authority**
+- Lucrehulk Battle Carrier
+
+**New Republic**
+- MC80 Home One Type Cruiser
+- Viscount Star Defender
+
+**Duskhan League**
+- Acclamator-II Cruiser
+- Aramadia Star Dreadnought
+
+### Ground Rewards
+
+**Galactic Empire**
+- Stormtrooper Platoon
+- AT-ST/A Walker Company
+- "Deathhawk" Combat Airspeeder Wing
+- Turbolaser Refit AT-AT Walker
+
+**Pentastar Alignment**
+- Enforcer Trooper Platoon
+- AT-DP Walker Company
+- C-10 Siege Tower
+- Nemesis-class Gunship
+
+**Greater Maldrood**
 - Navy Commando Platoon
 - Infantry Support Platform Company
 - 2-M Repulsor Tank Company
 - Heavy Recovery Vehicle Company
 
-#### Zsinj's Empire
-
-- Aggressor Star Destroyer
-- Sorannan Star Destroyer
-- Vengeance Star Dreadnought
+**Zsinj's Empire**
 - EVO Trooper Platoon
 - Repulsor Scout Company
 - Imperial APC Company
 - Tracked Shield Disabler Company
 
-#### Eriadu Authority
-
-- Gladiator-I Star Destroyer
-- Torpedo Sphere
-- Assertor Star Dreadnought
+**Eriadu Authority**
 - Army Special Missions Platoon
 - AT-MP Walker Company
 - 1-M Repulsortank Company
 - Lancet Wing
 
-#### Empire of the Hand
+**Minor Warlords**
+- Army Trooper Platoon
+- AT-ST Walker Company
+- TIE Crawler Company
+- AT-AT Walker
 
-- Chaf Destroyer
-- Chiss Star Destroyer
-- Peltast Star Destroyer
-- Phalanx Trooper Platoon
-- Flame Tank Company
-
-#### Chiss Ascendancy
-
-- Fruoro Picket Ship
-- Syndic Destroyer
-
-#### Corporate Sector Authority
-
-- Recusant Light Destroyer
-- Invincible Cruiser
-- Lucrehulk Battle Carrier
-- B1 Battle Droid Squad
-
-#### Hutt Cartels
-
-- Barabbula Frigate
-- Kossak Frigate
-- Vontor Destroyer
-- Dor'bulla Warship
-
-#### Hapes Consortium
-
-- Flare Corvette
-- Pulsar Cruiser
-- Terephon Cruiser
-- Water Dragon-M Hovertank Company
-- Fire Dragon Hovertank Company
-
-#### New Republic
-
-- MC30c Frigate
-- MC80 Liberty Cruiser
-- MC80B Cruiser
-- Marine Platoon
-- T3-B Tracked Tank Company
-
-#### Corellians
-
-- Proficient Light Cruiser
-
-#### Independent Forces
-
-- Modified Super Transport XI
-- Local Military Platoon
-
-#### Ssi-Ruuvi Imperium
-
-- Shree Battle Cruiser
-- Ssi-Ruuk Soldier Platoon
-
-
-
-#### Duskhan League
-
-- Aramadia Star Dreadnought
-- Yevethan Soldier Platoon
-- Yevethan Rocket Company
+**Duskhan League**
+- AT-TE Walker
 
 ---
 
