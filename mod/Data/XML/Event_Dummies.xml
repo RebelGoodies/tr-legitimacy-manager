@@ -1,6 +1,2982 @@
 <?xml version="1.0"?>
 <Event_Dummies>
 
+	<!-- Workaround to add Affiliation without touching original unit xml files -->
+	<!-- Note: Reward space variants are swapped out (via lua) when construced -->
+	<!-- All Factions -->
+	<!-- Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld -->
+
+	<!-- Imperial Infantry Rewards -->
+
+	<GroundCompany Name="Reward_Imperial_Defiler_Squad">
+		<Variant_Of_Existing_Type>Imperial_Defiler_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Pentastar_Enforcer_Trooper_Squad">
+		<Variant_Of_Existing_Type>Pentastar_Enforcer_Trooper_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Zsinj_EVO_Trooper_Squad">
+		<Variant_Of_Existing_Type>Zsinj_EVO_Trooper_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Navy_Commando_Squad"> <!-- Greater_Maldrood -->
+		<Variant_Of_Existing_Type>Imperial_Navy_Commando_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<!-- Empire, Greater_Maldrood -->
+		<Affiliation>
+			Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Army_Special_Missions_Squad"> <!-- Eriadu_Authority -->
+		<Variant_Of_Existing_Type>Imperial_Army_Special_Missions_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Imperial Advanced Vehicle Rewards -->
+
+	<SpecialStructure Name="U_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Template_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> 
+		TEXT_TOOLTIP_A_FACTORY
+		TEXT_TOOLTIP_SEPARATOR_STAT_BLOCK
+		TEXT_TOOLTIP_A_FACTORY_GM_HEALTH 
+		TEXT_TOOLTIP_SEPARATOR_GARRISON_BLOCK
+		TEXT_TOOLTIP_A_FACTORY_GM1
+		TEXT_TOOLTIP_SEPARATOR_BONUS_BLOCK
+		TEXT_TOOLTIP_UPKEEP_FACTORY_ADV
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_A_FACTORY </MP_Encyclopedia_Text>
+		
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Required_Special_Structures></Required_Special_Structures>
+
+		<!--All Eras-->
+		<Starting_Spawned_Units_Tech_0>A5_Juggernaut, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>A5_Juggernaut, 1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+
+	<GroundCompany Name="Reward_Imperial_B5_Juggernaut_Company">
+		<Variant_Of_Existing_Type>Imperial_B5_Juggernaut_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>U_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_TRSD_Company"> <!-- Zsinj_Empire -->
+		<Variant_Of_Existing_Type>Imperial_TRSD_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_C10_Siege_Tower_Company"> <!-- Pentastar -->
+		<Variant_Of_Existing_Type>Imperial_C10_Siege_Tower_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Lancet_Group"> <!-- Eriadu_Authority -->
+		<Variant_Of_Existing_Type>Imperial_Lancet_Group</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Heavy_Recovery_Vehicle_Company"> <!-- Greater_Maldrood -->
+		<Variant_Of_Existing_Type>Imperial_Heavy_Recovery_Vehicle_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_AT_AT_Company"> <!-- Empire -->
+		<Variant_Of_Existing_Type>Imperial_AT_AT_Company</Variant_Of_Existing_Type>
+		<!-- Empire, Eriadu_Authority -->
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_AT_AT_Refit_Company"> <!-- Empire -->
+		<Variant_Of_Existing_Type>Imperial_AT_AT_Refit_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Imperial Space -->
+
+	<SpaceUnit Name="Reward_Generic_Victory_Destroyer_Two">
+		<Variant_Of_Existing_Type>Generic_Victory_Destroyer_Two</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Star_Destroyer">
+		<Variant_Of_Existing_Type>Generic_Star_Destroyer</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Star_Destroyer_Two">
+		<Variant_Of_Existing_Type>Generic_Star_Destroyer_Two</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<!-- Dark Empire -->
+
+	<SpaceUnit Name="Reward_Eclipse_Star_Destroyer">
+		<Variant_Of_Existing_Type>Eclipse_Star_Destroyer</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Sovereign">
+		<Variant_Of_Existing_Type>Sovereign</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_MTC_Sensor">
+		<Variant_Of_Existing_Type>MTC_Sensor</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_MTC_Support">
+		<Variant_Of_Existing_Type>MTC_Support</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Hunter_Killer_Probot">
+		<Variant_Of_Existing_Type>Hunter_Killer_Probot</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_XR85_Company">
+		<Variant_Of_Existing_Type>Imperial_XR85_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Advanced_Vehicle_Factory | A_Ground_Advanced_Vehicle_Factory | P_Ground_Advanced_Vehicle_Factory | T_Ground_Advanced_Vehicle_Factory | Z_Ground_Advanced_Vehicle_Factory | U_Ground_Advanced_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Chrysalide_Company">
+		<Variant_Of_Existing_Type>Imperial_Chrysalide_Company</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Dark_Jedi_Squad">
+		<Variant_Of_Existing_Type>Imperial_Dark_Jedi_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks | Cloning_HQ
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Dark_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Dark_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks | Cloning_HQ
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Compforce_Assault_Squad">
+		<Variant_Of_Existing_Type>Imperial_Compforce_Assault_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks | Cloning_HQ
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Empire -->
+
+	<SpaceUnit Name="Reward_Vindicator_Cruiser">
+		<Variant_Of_Existing_Type>Vindicator_Cruiser</Variant_Of_Existing_Type>
+        <Affiliation>
+			<!-- Empire, Greater_Maldrood, -->
+			Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Impellor">
+		<Variant_Of_Existing_Type>Impellor</Variant_Of_Existing_Type>
+        <Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Compellor">
+		<Variant_Of_Existing_Type>Compellor</Variant_Of_Existing_Type>
+        <Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_AT_ST_Company">
+		<Variant_Of_Existing_Type>Imperial_AT_ST_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_AT_ST_A_Company">
+		<Variant_Of_Existing_Type>Imperial_AT_ST_A_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Deathhawk_Group">
+		<Variant_Of_Existing_Type>Imperial_Deathhawk_Group</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Pentastar -->
+
+	<SpaceUnit Name="Reward_Enforcer"> <!-- Removing -->
+		<Variant_Of_Existing_Type>Enforcer</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Venator">
+		<Variant_Of_Existing_Type>Generic_Venator</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Secutor">
+		<Variant_Of_Existing_Type>Generic_Secutor</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Praetor_Carrier">
+		<Variant_Of_Existing_Type>Generic_Praetor_Carrier</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Mandator_III">
+		<Variant_Of_Existing_Type>Generic_Mandator_III</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_AT_DP_Company">
+		<Variant_Of_Existing_Type>Imperial_AT_DP_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_Century_Tank_Company">
+		<Variant_Of_Existing_Type>Imperial_Century_Tank_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Greater Maldrood -->
+
+	<SpaceUnit Name="Reward_Crimson_Victory">
+		<Variant_Of_Existing_Type>Crimson_Victory</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Tector">
+		<Variant_Of_Existing_Type>Generic_Tector</Variant_Of_Existing_Type>
+        <Affiliation>
+			<!-- Empire, Pentastar, Greater_Maldrood, -->
+			Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<SpaceUnit Name="Reward_Altor_Replenishment_Ship">
+		<Variant_Of_Existing_Type>Altor_Replenishment_Ship</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Bellator">
+		<Variant_Of_Existing_Type>Generic_Bellator</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_ISP_Company">
+		<Variant_Of_Existing_Type>Imperial_ISP_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_2M_Company">
+		<Variant_Of_Existing_Type>Imperial_2M_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Zsinj's Empire -->
+
+	<SpaceUnit Name="Reward_Generic_Aggressor">
+		<Variant_Of_Existing_Type>Generic_Aggressor</Variant_Of_Existing_Type>
+        <Affiliation>
+			<!-- Zsinj_Empire, Corporate_Sector, -->
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Sorannan">
+		<Variant_Of_Existing_Type>Generic_Sorannan</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Generic_Vengeance">
+		<Variant_Of_Existing_Type>Generic_Vengeance</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_Repulsor_Scout_Company">
+		<Variant_Of_Existing_Type>Imperial_Repulsor_Scout_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_APC_Company">
+		<Variant_Of_Existing_Type>Imperial_APC_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Eriadu Authority -->
+
+	<SpaceUnit Name="Reward_Generic_Gladiator">
+		<Variant_Of_Existing_Type>Generic_Gladiator</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Torpedo_Sphere">
+		<Variant_Of_Existing_Type>Torpedo_Sphere</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Assertor">
+		<Variant_Of_Existing_Type>Assertor</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Imperial_AT_MP_Company">
+		<Variant_Of_Existing_Type>Imperial_AT_MP_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Imperial_1M_Tank_Company">
+		<Variant_Of_Existing_Type>Imperial_1M_Tank_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- EotH -->
+
+	<SpaceUnit Name="Reward_Chaf_Destroyer">
+		<Variant_Of_Existing_Type>Chaf_Destroyer</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Chiss_Star_Destroyer">
+		<Variant_Of_Existing_Type>Chiss_Star_Destroyer</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<SpaceUnit Name="Reward_Peltast">
+		<Variant_Of_Existing_Type>Peltast</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<GroundCompany Name="Reward_Phalanx_Trooper_Squad">
+		<Variant_Of_Existing_Type>Phalanx_Trooper_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Flame_Tank_Company">
+		<Variant_Of_Existing_Type>Flame_Tank_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Chiss -->
+
+	<SpaceUnit Name="Reward_Fruoro">
+		<Variant_Of_Existing_Type>Fruoro</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Syndic_Destroyer">
+		<Variant_Of_Existing_Type>Syndic_Destroyer</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </SpaceUnit>
+
+	<!-- Corellia -->
+
+	<SpaceUnit Name="Reward_Proficient">
+		<Variant_Of_Existing_Type>Proficient</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<!-- Corporate Sector -->
+
+	<SpaceUnit Name="Reward_Recusant">
+		<Variant_Of_Existing_Type>Recusant</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Invincible_Cruiser">
+		<Variant_Of_Existing_Type>Invincible_Cruiser</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Lucrehulk_CSA">
+		<Variant_Of_Existing_Type>Lucrehulk_CSA</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_CSA_B1_Droid_Squad">
+		<Variant_Of_Existing_Type>CSA_B1_Droid_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks | Baktoid_HQ | Balmorran_Arms_HQ | Rossum_HQ
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Hutt Cartels -->
+
+	<SpaceUnit Name="Reward_Barabbula_Frigate">
+		<Variant_Of_Existing_Type>Barabbula_Frigate</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Karagga_Destroyer">
+		<Variant_Of_Existing_Type>Karagga_Destroyer</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Vontor_Destroyer">
+		<Variant_Of_Existing_Type>Vontor_Destroyer</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_DorBulla_Warship">
+		<Variant_Of_Existing_Type>DorBulla_Warship</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<!-- Hapes Consortium -->
+
+	<SpaceUnit Name="Reward_Flare">
+		<Variant_Of_Existing_Type>Flare</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Pulsar">
+		<Variant_Of_Existing_Type>Pulsar</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Terephon_Cruiser">
+		<Variant_Of_Existing_Type>Terephon_Cruiser</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Hapan_LightTank_Company">
+		<Variant_Of_Existing_Type>Hapan_LightTank_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | C_Ground_Light_Vehicle_Factory | S_Ground_Barracks | H_Ground_Light_Vehicle_Factory | HC_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Hapan_HeavyTank_Company">
+		<Variant_Of_Existing_Type>Hapan_HeavyTank_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- New Republic (Rebel) -->
+
+	<SpaceUnit Name="Reward_MC30c">
+		<Variant_Of_Existing_Type>MC30c</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Calamari_Cruiser">
+		<Variant_Of_Existing_Type>Calamari_Cruiser</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_MC80B">
+		<Variant_Of_Existing_Type>MC80B</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Rebel_Marine_Squad">
+		<Variant_Of_Existing_Type>Rebel_Marine_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Rebel_T3B_Company">
+		<Variant_Of_Existing_Type>Rebel_T3B_Company</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Heavy_Vehicle_Factory | A_Ground_Heavy_Vehicle_Factory | P_Ground_Heavy_Vehicle_Factory | T_Ground_Heavy_Vehicle_Factory | Z_Ground_Heavy_Vehicle_Factory | U_Ground_Droid_Works | C_Ground_Heavy_Vehicle_Factory | H_Ground_Heavy_Vehicle_Factory | HC_Ground_Heavy_Vehicle_Factory | R_Ground_Heavy_Vehicle_Factory | S_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Ssi-ruuvi Imperium -->
+
+	<GroundCompany Name="Reward_SsiRuuk_Soldier_Squad">
+		<Variant_Of_Existing_Type>SsiRuuk_Soldier_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<SpaceUnit Name="Reward_Shree_Cruiser">
+		<Variant_Of_Existing_Type>Shree_Cruiser</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<!-- Yevetha -->
+
+	<SpaceUnit Name="Reward_Generic_Aramadia">
+		<Variant_Of_Existing_Type>Generic_Aramadia</Variant_Of_Existing_Type>
+        <Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Yevetha_Infantry_Squad">
+		<Variant_Of_Existing_Type>Yevetha_Infantry_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundCompany Name="Reward_Yevethan_Plex_Squad">
+		<Variant_Of_Existing_Type>Yevethan_Plex_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<!-- Independent Forces -->
+
+	<SpaceUnit Name="Reward_Super_Transport_XI_Modified">
+		<Variant_Of_Existing_Type>Super_Transport_XI_Modified</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<GroundCompany Name="Reward_Military_Soldier_Team">
+		<Variant_Of_Existing_Type>Military_Soldier_Team</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			E_Ground_Barracks | P_Ground_Barracks | Z_Ground_Barracks | T_Ground_Barracks | A_Ground_Barracks | Cloning_HQ |
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+	</GroundCompany>
+
+	<!-- Legitimacy Group Unit Rewards -->
+
+	<GroundCompany Name="Reward_Imperial_Storm_Commando_Squad">
+		<Variant_Of_Existing_Type>Imperial_Storm_Commando_Squad</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			U_Ground_Barracks | C_Ground_Barracks | S_Ground_Barracks | H_Ground_Barracks | HC_Ground_Barracks | R_Ground_Barracks | Cloning_HQ
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</GroundCompany>
+
+	<SpaceUnit Name="Reward_Combat_Escort_Carrier">
+		<Variant_Of_Existing_Type>Combat_Escort_Carrier</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_One | Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_One | NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_One | SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_One | Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_One | Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Non_Capital_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpecialStructure Name="Reward_Merkuni_HQ">
+		<Variant_Of_Existing_Type>Merkuni_HQ</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Merkuni_Reduce_Production_Price">
+				<Unit_Strength_Category/>
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types> Trenchant, Combat_Escort_Carrier, Reward_Combat_Escort_Carrier </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Merkuni_Production_Time_Bonus">
+				<Unit_Strength_Category/>
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types> Trenchant, Combat_Escort_Carrier, Reward_Combat_Escort_Carrier </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpaceUnit Name="Reward_Generic_Tagge_Battlecruiser">
+		<Variant_Of_Existing_Type>Generic_Tagge_Battlecruiser</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Dreadnought_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Reward_Dragon_Heavy_Cruiser">
+		<Variant_Of_Existing_Type>Dragon_Heavy_Cruiser</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Heavy_Frigate_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</SpaceUnit>
+
+	<!-- Hero Upgrades -->
+
+	<!-- Empire -->
+
+	<DummyStructure Name="Extra_IsardUpgrade">
+		<Variant_Of_Existing_Type>IsardUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_DaalaUpgrade">
+		<Variant_Of_Existing_Type>DaalaUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_PellaeonUpgrade">
+		<Variant_Of_Existing_Type>PellaeonUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_PellaeonUpgrade2">
+		<Variant_Of_Existing_Type>PellaeonUpgrade2</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_RogrissUpgrade">
+		<Variant_Of_Existing_Type>RogrissUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- Pentastar -->
+
+	<DummyStructure Name="Extra_KaineUpgrade">
+		<Variant_Of_Existing_Type>KaineUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- Zsinj's Empire -->
+
+	<DummyStructure Name="Extra_IronFistUpgrade">
+		<Variant_Of_Existing_Type>IronFistUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- Eriadu Authority -->
+
+	<DummyStructure Name="Extra_Delvardus_ThalassaUpgrade">
+		<Variant_Of_Existing_Type>Delvardus_ThalassaUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_BrilliantUpgrade">
+		<Variant_Of_Existing_Type>BrilliantUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_BrilliantUpgradeEarly">
+		<Variant_Of_Existing_Type>BrilliantUpgradeEarly</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- Hutts -->
+
+	<DummyStructure Name="Extra_TroonolUpgrade">
+		<Variant_Of_Existing_Type>TroonolUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hapes_Consortium, Rebel, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- New Republic (Rebel) -->
+
+	<DummyStructure Name="Extra_SnunbUpgrade">
+		<Variant_Of_Existing_Type>SnunbUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_IblisUpgrade">
+		<Variant_Of_Existing_Type>IblisUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Two | NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Two | SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Two | Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Two | Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_IblisUpgrade2">
+		<Variant_Of_Existing_Type>IblisUpgrade2</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_IblisUpgrade3">
+		<Variant_Of_Existing_Type>IblisUpgrade3</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_IblisUpgrade4">
+		<Variant_Of_Existing_Type>IblisUpgrade4</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_MassaUpgrade">
+		<Variant_Of_Existing_Type>MassaUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_TerrikUpgrade">
+		<Variant_Of_Existing_Type>TerrikUpgrade</Variant_Of_Existing_Type>
+		<Affiliation>
+			Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Underworld
+		</Affiliation>
+		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
+			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
+			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
+			Hapan_Shipyard_Royal | Hapan_Shipyard_Thane | Hapan_Shipyard_Maluri | Hapan_Shipyard_Corr | Hapan_Shipyard_Requud | Hapan_Shipyard_Galney | Hapan_Shipyard_AlGray |
+			NewRepublic_Shipyard_Level_Three | NewRepublic_Shipyard_Level_Four |
+			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
+			SsiRuuvi_Shipyard_Level_Three | SsiRuuvi_Shipyard_Level_Four |
+			Yevetha_Shipyard_Level_Three | Yevetha_Shipyard_Level_Four |
+			Harrsk_Shipyard_Level_Three | Harrsk_Shipyard_Level_Four,
+			AI_Category_Dummy | Story_Category_Dummy
+		</Required_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- Legitimacy Groups -->
+	<!-- Using modified dummies without touching Legitimacy_Heroes.xml -->
+
+	<!-- Zann's Consortium - Zsinj-only -->
+	<!-- <DummyStructure Name="Extra_Dummy_Recruit_Group_Zann">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Zann</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure> -->
+
+	<!-- TIER V ================================================= -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Nishr">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Nishr</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Nivers">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Nivers</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Delurin">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Delurin</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Antem">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Antem</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Sillume">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Sillume</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_TransNebular">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_TransNebular</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Garos">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Garos</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Starlyte">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Starlyte</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Rhamalai">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Rhamalai</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Tatooine">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tatooine</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Stormtrooper">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Stormtrooper</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- TIER IV ================================================ -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Verpalion">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Verpalion</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Arda">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Arda</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Raveen">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Raveen</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Rayter">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Rayter</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Goroth">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Goroth</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Minos">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Minos</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Vogel">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Vogel</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Pulsar">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Pulsar</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Prentioch">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Prentioch</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Naboo">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Naboo</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Commenor">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Commenor</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Trax">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Trax</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<!-- TIER III =============================================== -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Kamino">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Kamino</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Restuss">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Restuss</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Lumiya_Sith">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Lumiya_Sith</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Wessex">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Wessex</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Radama">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Radama</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Dolis_3">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Dolis_3</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Sellasas">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Sellasas</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Elrood">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Elrood</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<!-- TIER II ================================================ -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Storm_Commando">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Storm_Commando</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Tagge">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Tagge_CSA">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge_CSA</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Tapani">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tapani</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Maelstrom">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Maelstrom</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Lambda">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Lambda</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Prakith">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Prakith</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Tierfon">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tierfon</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<!-- TIER I ================================================= -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Gronn">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Gronn</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Dangor">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Dangor</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Drommel">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Drommel</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Grunger">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Grunger</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+	</DummyStructure>
+
+	<!-- Blue's LGHE ================================================= -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Protectorate">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_PROTECTORATE</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_PROTECTORATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER4.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Grazz">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_GRAZZ</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_GRAZZ</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER4.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Rydonni">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_RYDONNI</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_RYDONNI</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Prentioch">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_PRENTIOCH</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_PRENTIOCH</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>39</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Admirals">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_ADMIRALS</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_ADMIRALS</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>8500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>67</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Anaxes">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_ANAXES</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_ANAXES</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER1.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>19500</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Population_Value>210</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Wrath">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_WRATH</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_WRATH</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER1.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>25000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Population_Value>210</Population_Value>
+	</DummyStructure>
+
+	<!-- Legacy of War ================================================= -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Brentaal">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_ISOTO</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_ISOTO</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER5.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Kalist">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_KALIST</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_KALIST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER4.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>1600</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Restored">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_DEVIAN</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_DEVIAN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Kathol">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_SARNE</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_SARNE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Empirereborn">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_HETHRIR</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_HETHRIR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Beheboth">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_GIEL</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_GIEL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_ZeroCommand">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_ZEROCOMMAND</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_ZEROCOMMAND</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>7000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>67</Population_Value>
+	</DummyStructure>
+	
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Dasta">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Text_ID>TEXT_GROUP_NAME_DASTA</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_DASTA</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER1.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>17000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>200</Population_Value>
+	</DummyStructure>
+
+	<!-- Mboz's Imperial Heroes ================================================= -->
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Ghostwire">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_GHOSTWIRE</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_GHOSTWIRE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER4.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>31</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Forge">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_FORGE</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_FORGE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER5.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>2</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Vanguard">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_VANGUARD</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_VANGUARD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER2.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>15000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>93</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Watcher">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_WATCHER</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_WATCHER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>8000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>50</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Crimson">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_CRIMSON</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_CRIMSON</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>8000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>3</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Iron">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_IRON</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_IRON</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER4.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>3</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Veil">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_VEIL</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_VEIL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER5.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>3</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Celestial">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_CELESTIAL</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_CELESTIAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER1.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>25000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>320</Population_Value>
+	</DummyStructure>
+
+	<DummyStructure Name="Extra_Dummy_Recruit_Group_Ironhold">
+		<Variant_Of_Existing_Type>Dummy_Recruit_Group_Tagge</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		
+		<Text_ID>TEXT_GROUP_NAME_IRONHOLD</Text_ID>
+		<Encyclopedia_Text>TEXT_GROUP_DESCRIPTION_IRONHOLD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER5.tga</Icon_Name>
+
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Warlords, Corellia, Chiss, Ssiruuvi_Imperium, Killik_Hives, Mandalorians, Yevetha, Independent_Forces, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+
+		<Build_Initially_Locked>yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+	</DummyStructure>
+
 	<!-- Era dummies -->
 
 	<DummyStructure Name="Era_Two_Empire_Header">

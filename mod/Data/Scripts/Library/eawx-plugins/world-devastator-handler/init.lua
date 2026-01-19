@@ -27,6 +27,16 @@ return {
     target = PluginTargets.weekly(),
     dependencies = {"ui/galactic-display"},
     init = function(self, ctx, galactic_display)
-        return DevastatorHandler(galactic_display, ctx.galactic_conquest)
+        local Handler = DevastatorHandler(galactic_display, ctx.galactic_conquest)
+        if not (
+            Find_Player("EMPIRE").Is_Human() or
+            Find_Player("PENTASTAR").Is_Human() or
+            Find_Player("ERIADU_AUTHORITY").Is_Human() or
+            Find_Player("ZSINJ_EMPIRE").Is_Human() or
+            Find_Player("GREATER_MALDROOD").Is_Human()
+        ) then
+            ctx.galactic_conquest.Events.TacticalBattleEnded:attach_listener(Handler.on_battle_end, Handler)
+        end
+        return Handler
     end
 }

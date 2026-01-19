@@ -1,9 +1,523 @@
 <?xml version="1.0" ?>
 <Dummy_Structures>
-
 	
-<!-- Regicide -->
+	<!-- To avoid editing MasterText, plain text with non-breaking space (U+00A0) is used. max of 55 chars per line -->
+	<!-- Thus, more compatibility with other submods that edit text -->
+	
+	<!-- Playable Factions -->
+	<!-- Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld -->
+	
+	<!-- Instant Integrate -->
+	
+	<DummyStructure Name="Template_Integrate_Dummy">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Integrate Faction</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Instantly integrate this Imperial faction to the one
+			with the highest legitimacy，without needing to capture
+			any planets or eliminate leaders.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_ENCYCLOPEDIA_UNDERWORLD_SYMBOL.tga</Icon_Name>
+		
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Lua_Script>DelayedSelfDelete</Lua_Script>
+		
+		<GUI_Row>1</GUI_Row>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Options_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>50</Build_Cost_Credits>
+		<Build_Time_Seconds>7</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>3</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_All_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Integrate All</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			WARNING: This could potentially cripple the economy.
+			 
+			Instantly integrate all Imperial factions to the one
+			with the highest legitimacy，without needing to capture
+			any planets or eliminate leaders.
+		</Encyclopedia_Text>
+		<Icon_Name>I_ENCYCLOPEDIA_UNDERWORLD_SYMBOL.tga</Icon_Name>
+		
+		<Build_Cost_Credits>100</Build_Cost_Credits>
+		<Build_Time_Seconds>8</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>7</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Empire">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Galactic Empire</Text_ID>
+		<Icon_Name>I_BUTTON_IR.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Pentastar">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Pentastar Alignment</Text_ID>
+		<Icon_Name>I_BUTTON_PA.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Greater_Maldrood">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Greater Maldrood</Text_ID>
+		<Icon_Name>I_BUTTON_GM.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Zsinj_Empire">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Zsinj's Empire</Text_ID>
+		<Icon_Name>I_BUTTON_ZE.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Eriadu_Authority">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Eriadu Authority</Text_ID>
+		<Icon_Name>I_BUTTON_EA.tga</Icon_Name>
+	</DummyStructure>
 
+	<DummyStructure Name="Option_Integrate_EmpireoftheHand">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Empire of the Hand</Text_ID>
+		<Icon_Name>I_BUTTON_EOTH.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Corporate_Sector">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Corporate Sector Authority</Text_ID>
+		<Icon_Name>I_BUTTON_CSA.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Warlords">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Minor Warlords</Text_ID>
+		<Icon_Name>I_ENCYCLOPEDIA_JABBA_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Corellia">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Corellians</Text_ID>
+		<Icon_Name>I_BUTTON_CORELLIA.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Chiss">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Chiss Ascendancy</Text_ID>
+		<Icon_Name>I_BUTTON_CHISS.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_SsiRuuvi_Imperium">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Ssi-ruuvi Imperium</Text_ID>
+		<Icon_Name>I_BUTTON_RUUVI.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Killik_Hives">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Killik Hives</Text_ID>
+		<Icon_Name>I_BUTTON_KILLIKS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Yevetha">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Duskhan League</Text_ID>
+		<Icon_Name>I_BUTTON_DUSKHAN_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Integrate_Independent_Forces">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Independent Forces</Text_ID>
+		<Icon_Name>I_ENCYCLOPEDIA_PIRATES_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Hutt_Cartels">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Hutt Cartels</Text_ID>
+		<Icon_Name>I_BUTTON_HUTTS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Hapes_Consortium">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Hapes Consortium</Text_ID>
+		<Icon_Name>I_BUTTON_HAPES_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Rebel">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate New Republic</Text_ID>
+		<Icon_Name>I_BUTTON_NR_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Underworld">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Yuuzhan Vong</Text_ID>
+		<Icon_Name>I_BUTTON_VONG_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Integrate_Mandalorians">
+		<Variant_Of_Existing_Type>Template_Integrate_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Integrate Mandalorian Clans</Text_ID>
+		<Icon_Name>I_BUTTON_MANDAL_MOTORS.TGA</Icon_Name>
+	</DummyStructure>
+	
+	<!-- Groups -->
+
+	<DummyStructure Name="Option_Legitimacy_Group_1">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Legitimacy Group Player</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Receive a random legitimacy group for yourself.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIERSPECIAL.tga</Icon_Name>
+		
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Lua_Script>DelayedSelfDelete</Lua_Script>
+		
+		<GUI_Row>1</GUI_Row>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Options_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>3</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimacy_Group_2">
+		<Variant_Of_Existing_Type>Option_Legitimacy_Group_1</Variant_Of_Existing_Type>
+		
+		<Text_ID>Legitimacy Group Highest</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Give a random legitimacy group to the faction with the
+			highest legitimacy.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER1.tga</Icon_Name>
+
+		<Required_Special_Structures>Options_Category_Dummy</Required_Special_Structures>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimacy_Group_3">
+		<Variant_Of_Existing_Type>Option_Legitimacy_Group_2</Variant_Of_Existing_Type>
+		
+		<Text_ID>Legitimacy Group Highest x10</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Gives up to 10 random legitimacy groups to the faction
+			with the highest legitimacy.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_IMPERIAL_LEGITIMACY_TIER3.tga</Icon_Name>
+		<Build_Cost_Credits>10</Build_Cost_Credits>
+		<Build_Time_Seconds>7</Build_Time_Seconds>
+	</DummyStructure>
+	
+	<!-- Instant max legitimacy -->
+	
+	<DummyStructure Name="Template_Legitimized_Dummy">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimacy</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Make this faction the most legitimate faction.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_ENCYCLOPEDIA_UNDERWORLD_SYMBOL.tga</Icon_Name>
+		
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Lua_Script>DelayedSelfDelete</Lua_Script>
+		
+		<GUI_Row>0</GUI_Row>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Options_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>2</Build_Cost_Credits>
+		<Build_Time_Seconds>3</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Reset_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Reset Legitimacy</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Recalculate the legitimacy of each imperial faction.
+			The value depends on the planets controlled by each
+			faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_ENCYCLOPEDIA_UNDERWORLD_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Empire">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Galactic Empire</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Galactic Empire the most legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_IR_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Pentastar">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Pentastar Alignment</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Pentastar Alignment the most legitimate
+			faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_PA_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Greater_Maldrood">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Greater Maldrood</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Greater Maldrood the most legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_GM_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Zsinj_Empire">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Zsinj's Empire</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes Zsinj's Empire the most legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_ZE.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Eriadu_Authority">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Eriadu Authority</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Eriadu Authority the most legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EA_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_EmpireoftheHand">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Empire of the Hand</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Empire of the Hand the most legitimate
+			faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EOTH_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Corporate_Sector">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Corporate Sector</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Corporate Sector Authority the most
+			legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_CSA_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Warlords">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Instant Legitimized Minor Warlords</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Makes the Minor Warlords the most legitimate faction.
+		</Encyclopedia_Text>
+		<Icon_Name>I_ENCYCLOPEDIA_JABBA_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Corellia">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Corellians</Text_ID>
+		<Icon_Name>I_BUTTON_CORELLIA_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Chiss">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Chiss Ascendancy</Text_ID>
+		<Icon_Name>I_BUTTON_CHISS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_SsiRuuvi_Imperium">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Ssi-ruuvi Imperium</Text_ID>
+		<Icon_Name>I_BUTTON_RUUVI_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Legitimized_Killik_Hives">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Killik Hives</Text_ID>
+		<Icon_Name>I_BUTTON_KILLIKS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Yevetha">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Duskhan League</Text_ID>
+		<Icon_Name>I_BUTTON_DUSKHAN_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Independent_Forces">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Independent Forces</Text_ID>
+		<Icon_Name>I_ENCYCLOPEDIA_PIRATES_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Hutt_Cartels">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Hutt Cartels</Text_ID>
+		<Icon_Name>I_BUTTON_HUTTS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Hapes_Consortium">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Hapes Consortium</Text_ID>
+		<Icon_Name>I_BUTTON_HAPES_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Rebel">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized New Republic</Text_ID>
+		<Icon_Name>I_BUTTON_NR_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Underworld">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Yuuzhan Vong</Text_ID>
+		<Icon_Name>I_BUTTON_VONG_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Legitimized_Mandalorians">
+		<Variant_Of_Existing_Type>Template_Legitimized_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Instant Legitimized Mandalorian Clans</Text_ID>
+		<Icon_Name>I_BUTTON_MANDAL_MOTORS.TGA</Icon_Name>
+	</DummyStructure>
+	
+	<!-- Add faction to legitimacy system -->
+	
+	<DummyStructure Name="Template_Add_Legitimacy_Dummy">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Add to Legitimacy</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			Add this faction to the Imperial legitimacy system.
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_ENCYCLOPEDIA_UNDERWORLD_SYMBOL.tga</Icon_Name>
+		
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Lua_Script>DelayedSelfDelete</Lua_Script>
+		
+		<GUI_Row>0</GUI_Row>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Options_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>20</Build_Cost_Credits>
+		<Build_Time_Seconds>5</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Add_EmpireoftheHand_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Empire of the Hand Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_EOTH_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Add_Corporate_Sector_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Corporate Sector Authority Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_CSA_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Add_Warlords_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Minor Warlords Legitimacy</Text_ID>
+		<Icon_Name>I_ENCYCLOPEDIA_JABBA_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Corellia_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Corellians Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_CORELLIA_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Chiss_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Chiss Ascendancy Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_CHISS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+	
+	<DummyStructure Name="Option_Add_SsiRuuvi_Imperium_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Ssi-ruuvi Imperium Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_RUUVI_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Killik_Hives_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Killik Hives Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_KILLIKS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Yevetha_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>Duskhan League Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_DUSKHAN_CAPITAL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Independent_Forces_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Independent Forces Legitimacy</Text_ID>
+		<Icon_Name>I_ENCYCLOPEDIA_PIRATES_SYMBOL.tga</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Hutt_Cartels_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Hutt Cartels Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_HUTTS_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Hapes_Consortium_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Hapes Consortium Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_HAPES_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Rebel_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>New Republic Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_NR_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Underworld_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Yuuzhan Vong Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_VONG_CAPITAL.TGA</Icon_Name>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Add_Mandalorians_Legitimacy">
+		<Variant_Of_Existing_Type>Template_Add_Legitimacy_Dummy</Variant_Of_Existing_Type>
+		<Text_ID>Mandalorian Clans Legitimacy</Text_ID>
+		<Icon_Name>I_BUTTON_MANDAL_MOTORS.TGA</Icon_Name>
+	</DummyStructure>
+	
+	<!-- Regicide -->
+	
 	<DummyStructure Name="Project_Ambition_Dummy">
 		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
 		
@@ -13,12 +527,12 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_ISARD.tga</Icon_Name>
 		
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
 		<Build_Cost_Credits>5000</Build_Cost_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
 		
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -33,7 +547,7 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_HISSA.tga</Icon_Name>
 
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
@@ -53,7 +567,7 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_THRAWN.tga</Icon_Name>
 
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
@@ -73,12 +587,12 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_DE.tga</Icon_Name>
 		
-		<Affiliation>Empire, Greater_Maldrood, Pentastar, Eriadu_Authority, Zsinj_Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
-		<Build_Cost_Credits>15000</Build_Cost_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
 		
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -86,6 +600,21 @@
 		<SFXEvent_Build_Complete>Unit_Respawn_Emperor</SFXEvent_Build_Complete>
 		<SFXEvent_Build_Started></SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled></SFXEvent_Build_Cancelled>
+	</DummyStructure>
+
+	<DummyStructure Name="Dummy_Dark_Empire">
+		<Variant_Of_Existing_Type>Dummy_Regicide_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>Dark Empire</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+			The most legitimate faction becomes the Imperial
+			Remnant. Dark Empire requirements are bypassed and
+			Emperor Palpatine will take command of Imperial forces
+			on regime change.
+		</Encyclopedia_Text>
+		<Lua_Script>DelayedSelfDelete</Lua_Script>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
 	</DummyStructure>
 	
 	<DummyStructure Name="Dummy_Regicide_Jax">
@@ -97,7 +626,7 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_JAX.tga</Icon_Name>
 		
-		<Affiliation>Empire, Greater_Maldrood, Pentastar, Eriadu_Authority, Zsinj_Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
@@ -117,7 +646,7 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_DAALA.tga</Icon_Name>
 		
-		<Affiliation>Empire, Greater_Maldrood, Pentastar, Eriadu_Authority, Zsinj_Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
@@ -137,7 +666,7 @@
 		
 		<Icon_Name>I_BUTTON_IMPERIAL_REGIME_PELLEAON.tga</Icon_Name>
 		
-		<Affiliation>Empire, Greater_Maldrood, Pentastar, Eriadu_Authority, Zsinj_Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Tech_Level>1</Tech_Level>
 		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
@@ -148,6 +677,54 @@
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 	</DummyStructure>
 	
+	<DummyStructure Name="Dummy_Regicide_Refuse_Palpatine">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_REGICIDE_NAME_REFUSE_PALPATINE</Text_ID>
+		<Encyclopedia_Text>TEXT_REGICIDE_DESCRIPTION_REFUSE_PALPATINE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT </Encyclopedia_Unit_Class>
+		
+		<Icon_Name>I_BUTTON_REFUSE_PALPATINE.tga</Icon_Name>
+		
+		<Affiliation>Empire, Pentastar, Greater_Maldrood, Zsinj_Empire, Eriadu_Authority, Empireofthehand, Corporate_Sector, Hutt_Cartels, Hapes_Consortium, Rebel, Underworld</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>1</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		
+		<SFXEvent_Build_Complete>Unit_Taunt_Emperor</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started></SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled></SFXEvent_Build_Cancelled>
+	</DummyStructure>
+
+	<DummyStructure Name="Dummy_Regicide_Zann_Contact">
+		<Variant_Of_Existing_Type>Template_Research_Dummy</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_REGICIDE_NAME_ZANN_CONTACT</Text_ID>
+		<Encyclopedia_Text>TEXT_REGICIDE_DESCRIPTION_ZANN_CONTACT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_STORYEVENT </Encyclopedia_Unit_Class>
+		
+		<Icon_Name>I_BUTTON_ZANN_REGIME.tga</Icon_Name>
+		
+		<Affiliation>Zsinj_Empire</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>1</Tech_Level>
+		<Required_Special_Structures>AI_Category_Dummy | Story_Category_Dummy</Required_Special_Structures>
+		<Build_Cost_Credits>15000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		
+		<SFXEvent_Build_Complete>Unit_Taunt_Tyber_Zann_1</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started></SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled></SFXEvent_Build_Cancelled>
+	</DummyStructure>
+
 	<!-- Bacta War -->
 	
 	<DummyStructure Name="Dummy_Research_Rylca">

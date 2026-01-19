@@ -1,4 +1,5 @@
 require("deepcore/std/class")
+StoryUtil = require("eawx-util/StoryUtil")
 
 ---@class FighterSpawn
 FighterSpawn = class()
@@ -19,6 +20,11 @@ function FighterSpawn:new(unit_entry)
     ---@type PlayerObject
     self.original_owner = Object.Get_Owner()
 
+	---Use another faction's fighters incase owner has no fighter entries. 
+	---@private
+	---@type string
+	self.backup_alias = self:get_backup_alias()
+
     ---@private
     self.restoreTable = {}
 
@@ -27,6 +33,39 @@ function FighterSpawn:new(unit_entry)
 
     ---@private
     self.fighters_docking = false
+
+	-- self.humanOwned = self.original_owner == Find_Player("local")
+	-- if self.humanOwned then StoryUtil.ShowScreenText("BackUp: "..tostring(self.backup_alias), 4, nil, {r = 244, g = 200, b = 0}) end
+	-- if self.humanOwned then StoryUtil.ShowScreenText("#Fighters: "..table.getn(self.spawned_fighers), 4, nil, {r = 200, g = 200, b = 100}) end
+end
+
+---Return the unit affiliation faction if owner has no fighter entries. 
+---@private
+---@return string faction
+function FighterSpawn:get_backup_alias()
+	---@type GameObjectType
+	local object_type = Object.Get_Type()
+	local object_faction = self.original_owner.Get_Faction_Name()
+	local gameConstants = ModContentLoader.get("GameConstants")
+	local alias = gameConstants.ALIASES[object_faction]
+
+	-- Check if owner has any figher entries
+	for _, faction_reserves in pairs(self.fighter_data) do
+		for faction, _ in pairs(faction_reserves) do
+			if faction == object_faction or faction == alias then
+				return "DEFAULT"
+			end
+		end
+	end
+
+	-- Return an affiliated faction, likely to have fighter entries
+	for _, faction in ipairs(gameConstants.ALL_FACTIONS) do
+		local player = Find_Player(faction)
+		if player and object_type.Is_Affiliated_With(player) then
+			return faction
+		end
+	end
+	return "DEFAULT"
 end
 
 function FighterSpawn:update()
@@ -80,10 +119,16 @@ function FighterSpawn:release_fighters()
 		local owner = Object.Get_Owner().Get_Faction_Name()
 		local gameConstants = ModContentLoader.get("GameConstants")
 		local alias = gameConstants.ALIASES[owner]
+		local alius2 = gameConstants.ALIASES[self.backup_alias]
+
 		if tab[owner] then
 			fighterEntry = tab[owner]
-		elseif tab[alias] then
+		elseif alias and tab[alias] then
 			fighterEntry = tab[alias]
+		elseif tab[self.backup_alias] then
+			fighterEntry = tab[self.backup_alias]
+		elseif alius2 and tab[alius2] then
+			fighterEntry = tab[alius2]
 		else
 			fighterEntry = tab["DEFAULT"]
 		end
@@ -227,12 +272,17 @@ function FighterSpawn:get_fighter_entry(tab)
     local ownerName = owner.Get_Faction_Name()
     local gameConstants = ModContentLoader.get("GameConstants")
     local alias = gameConstants.ALIASES[ownerName]
+	local alius2 = gameConstants.ALIASES[self.backup_alias]
 
     local fighter_tab
     if tab[ownerName] then
         fighter_tab = tab[ownerName]
     elseif alias and tab[alias] then
         fighter_tab = tab[alias]
+	elseif tab[self.backup_alias] then
+		fighter_tab = tab[self.backup_alias]
+	elseif alius2 and tab[alius2] then
+		fighter_tab = tab[alius2]
     elseif tab["DEFAULT"] then
         fighter_tab = tab["DEFAULT"]
     else
