@@ -1,0 +1,15 @@
+# Handle line endings automatically for files detected as text
+*               text=auto
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore      text
+*.md            text diff=markdown
+*.txt           text
+
+# Basic .gitattributes for a Lua repo.
+*.lua       text
+*.xml       text diff=xml
+
+# Fix syntax highlighting on GitHub to allow comments
+.vscode/*.json linguist-language=JSON-with-Comments
