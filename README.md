@@ -1,58 +1,146 @@
 **Disclaimer**: This project is not affiliated with the EaWX team.
 
-<img src="mod/Splash.png" alt="Splash image" width="128" style="float: right; margin-left: 1em; margin-bottom: 1em;">
+<img src="mod/Splash.png" alt="Splash image" height="128" style="float: right; margin-left: 1em; margin-bottom: 1em;">
 
-# template-eawx-submod
+# TR Legitimacy Manager
 
-Template repository for any EaWX submod.
+Manage the imperial legitimacy system at any time through the *Advanced Options tab*.
 
-## Setup local
+### Features
 
-Either clone or pull to a directory, where `<URL>` is the https or SSH link to the repository.
+- Add any faction to the Imperial legitimacy system.
+- Dynamically set one faction to be the most legitimate.
+- Instantly integrate the chosen faction into the most legitimate one (no need to kill leaders or capture planets).
+- Reset the legitimacy values.
+- Unlock random legitimacy group heroes on demand.
+- Cheat: Start Dark Empire as any faction (any time before era 5).
+- Always see the Imperial legitimacy stats in the government display.
+- Legitimacy groups are transferred when their faction is integrated.
+- Hero fighters and hero upgrades become available when their faction is integrated.
 
-**Clone to new directory**
-```
-git clone <URL>
-```
+### Integration Rewards
 
-**Use existing directory**
-```
-git init -b main
-git remote add origin <URL>
-git pull origin main
-git branch --set-upstream-to=origin/main main
-```
+Each faction has up to one space reward per shipyard tier (light, heavy, capital, dreadnought, SSD)
+and one ground reward per factory tier (barracks, light, heavy, advanced).
 
-## Setup Upstream
+#### Galactic Empire
 
-Track unmodified EaWX source for easier comparing and merging.
+- Vindicator Heavy Cruiser
+- Impellor Carrier
+- Compellor Battlecruiser
+- Stormtrooper Platoon
+- AT-ST Walker Company
+- "Deathhawk" Combat Airspeeder Wing
+- AT-AT Walker Company
 
-**Create vendor branch**
-```
-git checkout --orphan vendor/eawx
-git rm -rf .
-mkdir -p mod
-```
+#### Pentastar Alignment
 
-**Import and merge upstream files once**
-```
-git add mod
-git commit -m "Import EaWX mod upstream files"
-git checkout main
-git merge vendor/eawx --allow-unrelated-histories
-```
+- Venator Star Destroyer
+- Secutor Star Destroyer
+- Praetor Carrier Battlecruiser
+- Mandator-III Star Dreadnought
+- Enforcer Trooper Platoon
+- AT-DP Walker Company
+- TIE Crawler Company
+- C-10 Siege Tower
 
-**Merge upstream updates**
-```
-git checkout main
-git merge -X theirs vendor/eawx
-```
+#### Greater Maldrood
 
-## EaWX Mods
+- Crimson Victory-II Star Destroyer
+- Tector Star Destroyer
+- Altor Replenishment Ship
+- Bellator Star Dreadnought
+- Navy Commando Platoon
+- Infantry Support Platform Company
+- 2-M Repulsor Tank Company
+- Heavy Recovery Vehicle Company
 
-- Thrawn's Revenge (TR)
-- Fall of the Republic (FotR)
-- Revan's Revenge (RR)
+#### Zsinj's Empire
+
+- Aggressor Star Destroyer
+- Sorannan Star Destroyer
+- Vengeance Star Dreadnought
+- EVO Trooper Platoon
+- Repulsor Scout Company
+- Imperial APC Company
+- Tracked Shield Disabler Company
+
+#### Eriadu Authority
+
+- Gladiator-I Star Destroyer
+- Torpedo Sphere
+- Assertor Star Dreadnought
+- Army Special Missions Platoon
+- AT-MP Walker Company
+- 1-M Repulsortank Company
+- Lancet Wing
+
+#### Empire of the Hand
+
+- Chaf Destroyer
+- Chiss Star Destroyer
+- Peltast Star Destroyer
+- Phalanx Trooper Platoon
+- Flame Tank Company
+
+#### Chiss Ascendancy
+
+- Fruoro Picket Ship
+- Syndic Destroyer
+
+#### Corporate Sector Authority
+
+- Recusant Light Destroyer
+- Invincible Cruiser
+- Lucrehulk Battle Carrier
+- B1 Battle Droid Squad
+
+#### Hutt Cartels
+
+- Barabbula Frigate
+- Kossak Frigate
+- Vontor Destroyer
+- Dor'bulla Warship
+
+#### Hapes Consortium
+
+- Flare Corvette
+- Pulsar Cruiser
+- Terephon Cruiser
+- Water Dragon-M Hovertank Company
+- Fire Dragon Hovertank Company
+
+#### New Republic
+
+- MC30c Frigate
+- MC80 Liberty Cruiser
+- MC80B Cruiser
+- Marine Platoon
+- T3-B Tracked Tank Company
+
+#### Corellians
+
+- Proficient Light Cruiser
+
+#### Independent Forces
+
+- Modified Super Transport XI
+- Local Military Platoon
+
+#### Ssi-Ruuvi Imperium
+
+- Shree Battle Cruiser
+- Ssi-Ruuk Soldier Platoon
+
+
+
+#### Duskhan League
+
+- Aramadia Star Dreadnought
+- Yevethan Soldier Platoon
+- Yevethan Rocket Company
+
+---
 
 # License
 
