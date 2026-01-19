@@ -1,138 +1,145 @@
-# Legitimacy Manager (TR 3.4)
+# Legitimacy Manager (TR 3.5)
 
 ## How to launch this mod
 
-1. Download Thrawns Revenge 3.4 from
-  [Moddb.com](https://www.moddb.com/mods/thrawns-revenge/downloads/steam-thrawns-revenge-34)
-  and extract it to your Mods folder as `TR34`
+1. Download Thrawns Revenge 3.5 from
+  [Moddb.com](https://www.moddb.com/mods/thrawns-revenge/downloads/steam-thrawns-revenge-35)
+  and extract it to your Mods folder as `TR35`
 
-2. Create a new folder in the Mods folder called `LegitimacyManager`, place `Data3.4` into it, and rename it to `Data`.
+2. Create a new folder in the Mods folder called `LegitimacyManager`, place `Data3.5` into it, and rename it to `Data`.
   - Example path: `C:\Program Files (x86)\Steam\steamapps\common\Star Wars Empire at War\corruption\Mods\LegitimacyManager\Data`
 
 3. Set launch options:
 ```
-ModPath=Mods\LegitimacyManager ModPath=Mods\TR34
+ModPath=Mods\LegitimacyManager ModPath=Mods\TR35
 ```
 
 ---
 
 ## Description
 
-Manage the legitimacy system at any time through the Advanced Options tab.
+Manage the legitimacy system at any time through the advanced options tab.
 
-### Features
+### Imperial System
 
 - Add any faction to the Imperial legitimacy system.
-- Unlock random legitimacy group heroes on demand.
-- Dynamically set one faction to be the most legitimate.
-- Instantly integrate the chosen faction into the most legitimate one (no need to kill leaders or capture planets).
-- Reset the legitimacy values.
-- Start Dark Empire as any faction (any time before era 5).
-- Always see the Imperial legitimacy stats in the government display.
-- Legitimacy groups are transferred when their faction is integrated.
-- Hero upgrades are available when their faction is integrated.
+- Dynamically set one of the factions to be the most legitimate or reset values.
+- Instantly integrate the chosen faction into the most legitimate one, without needing to kill leaders or capture planets.
+- Always see the Imperial legitimacy stats in the (gold) government display (EotH uses silver).
+- Hero fighters and hero upgrades are available when their faction is integrated.
+- Cheat: Start dark empire as any faction, any time before era 5.
+- Cheat: Instantly unlock all research tech for eligible factions.
+
+### Legitimacy Group Selector
+
+- Toggle between random (default) and selectable group modes for finer control.
+- Legitimacy group rewards are transferred when a faction is integrated.
+
+**Random mode:**
+- Unlock random legitimacy group heroes/rewards on demand.
+- Options are: x1 or x10 for the most legitimate faction, and x1 for yourself.
+
+**Selectable mode:**
+- Pick and choose specific groups to unlock from one of the tiers.
+- This prevents the AI from receiving legitimacy groups.
 
 ### Integration Rewards
 
-#### Galactic Empire
+Each Imperial faction has roughly one space reward per shipyard tier (light, heavy, capital, dreadnought, SSD)
+and one ground reward per factory tier (barracks, light, heavy, advanced).
+
+#### Space Rewards
+
+**Galactic Empire**
 - Vindicator Heavy Cruiser
+- Lancer Frigate
+- Interdictor Star Destroyer
 - Impellor Carrier
 - Compellor Battlecruiser
-- Stormtrooper Platoon
-- AT-ST Walker Company
-- "Deathhawk" Combat Airspeeder Wing
-- AT-AT Walker Company
 
-#### Pentastar Alignment
+**Pentastar Alignment**
+- Victory-II Frigate
 - Venator Star Destroyer
 - Secutor Star Destroyer
 - Praetor Carrier Battlecruiser
 - Mandator-III Star Dreadnought
-- Enforcer Trooper Platoon
-- AT-DP Walker Company
-- TIE Crawler Company
-- C-10 Siege Tower
 
-#### Greater Maldrood
+**Greater Maldrood**
+- Customs Light Corvette
 - Crimson Victory-II Star Destroyer
+- Broadside Cruiser
 - Tector Star Destroyer
 - Altor Replenishment Ship
 - Bellator Star Dreadnought
+
+**Zsinj's Empire**
+- Vengeance Frigate
+- Dragon Heavy Cruiser
+- Aggressor Star Destroyer
+- Sorannan Star Destroyer
+- Vengeance Star Dreadnought
+
+**Eriadu Authority**
+- Arquitens Light Cruiser
+- Gladiator-I Star Destroyer
+- Torpedo Sphere
+- Praetor-II Battlecruiser
+- Assertor Star Dreadnought
+
+**Minor Warlords**
+- Executor Star Dreadnought
+
+**Corporate Sector Authority**
+- Lucrehulk Battle Carrier
+
+**New Republic**
+- MC80 Home One Type Cruiser
+- Viscount Star Defender
+
+**Duskhan League**
+- Acclamator-II Cruiser
+- Aramadia Star Dreadnought
+
+#### Ground Rewards
+
+**Galactic Empire**
+- Stormtrooper Platoon
+- AT-ST/A Walker Company
+- "Deathhawk" Combat Airspeeder Wing
+- Turbolaser Refit AT-AT Walker
+
+**Pentastar Alignment**
+- Enforcer Trooper Platoon
+- AT-DP Walker Company
+- C-10 Siege Tower
+- Nemesis-class Gunship
+
+**Greater Maldrood**
 - Navy Commando Platoon
 - Infantry Support Platform Company
 - 2-M Repulsor Tank Company
 - Heavy Recovery Vehicle Company
 
-#### Zsinj's Empire
-- Aggressor Star Destroyer
-- Sorannan Star Destroyer
-- Vengeance Star Dreadnought
+**Zsinj's Empire**
 - EVO Trooper Platoon
 - Repulsor Scout Company
 - Imperial APC Company
 - Tracked Shield Disabler Company
 
-#### Eriadu Authority
-- Gladiator-I Star Destroyer
-- Torpedo Sphere
-- Assertor Star Dreadnought
+**Eriadu Authority**
 - Army Special Missions Platoon
 - AT-MP Walker Company
 - 1-M Repulsortank Company
 - Lancet Wing
 
-#### Empire of the Hand
-- Chaf Destroyer
-- Chiss Star Destroyer
-- Peltast Star Destroyer
-- Phalanx Trooper Platoon
-- Flame Tank Company
+**Minor Warlords**
+- Army Trooper Platoon
+- AT-ST Walker Company
+- TIE Crawler Company
+- AT-AT Walker
 
-#### Chiss Ascendancy
-- Fruoro Picket Ship
-- Syndic Destroyer
-
-#### Corporate Sector
-- Recusant Light Destroyer
-- Invincible Cruiser
-- Lucrehulk Battle Carrier
-- B1 Battle Droid Squad
-
-#### Hutt Cartels
-- Barabbula Frigate
-- Kossak Frigate
-- Vontor Destroyer
-- Dor'bulla Warship
-
-#### Hapes Consortium
-- Flare Corvette
-- Pulsar Cruiser
-- Terephon Cruiser
-- Water Dragon-M Hovertank Company
-- Fire Dragon Hovertank Company
-
-#### New Republic
-- MC30c Frigate
-- MC80 Liberty Cruiser
-- MC80B Cruiser
-- Marine Platoon
-- T3-B Tracked Tank Company
-
-#### Corellians
-- Proficient Light Cruiser
-
-#### Duskhan League
-- Aramadia Star Dreadnought
-- Yevethan Soldier Platoon
-- Yevethan Rocket Company
-
-#### Ssi-Ruuvi Imperium
-- Shree Battle Cruiser
-- Ssi-Ruuk Soldier Platoon
-
-#### Independent Forces
-- Modified Super Transport XI
-- Local Military Platoon
+**Duskhan League**
+- AT-TE Walker
 
 # Credits
 

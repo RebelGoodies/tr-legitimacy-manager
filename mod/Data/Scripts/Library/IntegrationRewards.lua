@@ -1,237 +1,200 @@
---Units that become buildable when the faction is integrated.
---Update unit Affiliation and Required_Special_Structures in xml when adding rewards.
+---Units that become buildable when the faction is integrated.
+---Update unit Affiliation and Required_Special_Structures in xml when adding rewards.
 return {
 	["EMPIRE"] = {
-		"Imperial_Boarding_Shuttle", --
-		"Generic_Dominator", --
-		"Combat_Escort_Carrier", --
-		"Reward_Vindicator_Cruiser",
-		"Reward_Impellor",
-		"Reward_Compellor",
-		"Imperial_Stormtrooper_Squad",
-		"Reward_Imperial_Stormtrooper_Squad",
-		"Reward_Imperial_AT_ST_Company",
-		-- "Reward_Imperial_AT_ST_A_Company",
-		"Reward_Imperial_Deathhawk_Group",
-		"Reward_Imperial_AT_AT_Company",
-		-- "Reward_Imperial_AT_AT_Refit_Company",
+		"Imperial_Stormtrooper_Company", -- Standard
+		"AT_ST_A_Company",
+		"Deathhawk_Company",
+		"Imperial_AT_AT_Walker_Turbolaser_Refit_Company",
+		"Lancer_Frigate",
+		"Vindicator_Cruiser",
+		"Interdictor_Star_Destroyer",
+		"Impellor_Carrier",        -- Fractal
+		"Compellor_Battlecruiser", -- Fractal
 	},
 	["PENTASTAR"] = {
-		"PellaeonUpgrade",
-		"Imperial_Nemesis_Gunship_Group", --
-		"Raider_Corvette", --
-		-- "Reward_Enforcer",
-		"Reward_Generic_Venator",
-		"Reward_Generic_Secutor",
-		"Reward_Generic_Mandator_III",
-		"Reward_Generic_Praetor_Carrier",
-		"Reward_Pentastar_Enforcer_Trooper_Squad",
-		"Reward_Imperial_AT_DP_Company",
-		"Reward_Imperial_Century_Tank_Company",
-		"Reward_Imperial_C10_Siege_Tower_Company",
+		"Pellaeon_Reaper_Dummy", -- HeroUpgrade
+		"Enforcer_Trooper_Company",
+		"AT_DP_Company",
+		"Nemesis_Gunship_Company",
+		"C10_Siege_Tower_Company",
+		"Victory_II_Frigate",
+		"Venator_Star_Destroyer",
+		"Secutor_Star_Destroyer",
+		"Praetor_Carrier_Battlecruiser",
+		"Mandator_III_Dreadnought", --SSD
 	},
 	["GREATER_MALDROOD"] = {
-		"Crimson_Victory",
-		"Reward_Crimson_Victory",
-		"Reward_Generic_Tector",
-		"Reward_Altor_Replenishment_Ship",
-		"Reward_Generic_Bellator",
-		"Imperial_Navy_Commando_Squad",
-		"Reward_Imperial_Navy_Commando_Squad",
-		"Reward_Imperial_ISP_Company",
-		"Reward_Imperial_2M_Company",
-		"Reward_Imperial_Heavy_Recovery_Vehicle_Company",
+		"Crimson_Victory_II_Star_Destroyer", -- Standard
+		"Navy_Commando_Company",
+		"Imperial_ISP_Company",
+		"2M_Repulsor_Tank_Company",
+		"Heavy_Recovery_Vehicle_Company",
+		"Customs_Corvette",
+		"Broadside_Cruiser",
+		"Tector_Star_Destroyer",
+		"Altor_Replenishment_Ship",
+		"Bellator_Star_Dreadnought", --SSD
 	},
 	["ZSINJ_EMPIRE"] = {
-		"Imperial_Defiler_Squad",
-		"Imperial_AT_AP_Walker_Company", --
-		"Reward_Imperial_Defiler_Squad",
-		"Reward_Generic_Aggressor",
-		"Reward_Generic_Sorannan",
-		"Reward_Generic_Vengeance",
-		"Reward_Zsinj_EVO_Trooper_Squad",
-		"Reward_Imperial_Repulsor_Scout_Company",
-		"Reward_Imperial_APC_Company",
-		"Reward_Imperial_TRSD_Company",
+		"Defiler_Company", -- Requires Urai
+		"EVO_Trooper_Company",
+		"Repulsor_Scout_Company",
+		"Imperial_APC_Company",
+		"Tracked_Shield_Disabler_Company",
+		"Vengeance_Frigate",
+		"Dragon_Heavy_Cruiser",
+		"Aggressor_Star_Destroyer",
+		"Sorannan_Star_Destroyer",
+		"Vengeance_Star_Dreadnought", --SSD
 	},
 	["ERIADU_AUTHORITY"] = {
-		"DaalaUpgrade",
-		"Imperial_1H_Tank_Company", --
-		"Arquitens", --
-		"Reward_Generic_Gladiator",
-		"Reward_Torpedo_Sphere",
-		"Reward_Assertor",
-		"Reward_Imperial_Army_Special_Missions_Squad",
-		"Reward_Imperial_AT_MP_Company",
-		"Reward_Imperial_1M_Tank_Company",
-		"Reward_Imperial_Lancet_Group",
+		"Daala_Knight_Hammer_Dummy", -- HeroUpgrade
+		"Army_Special_Missions_Company",
+		"AT_MP_Company",
+		"1M_Tank_Company",
+		"Lancet_Air_Artillery_Company",
+		"Arquitens",
+		"Gladiator_I",
+		"Torpedo_Sphere",
+		"Praetor_II_Battlecruiser",
+		"Assertor_Star_Dreadnought", --SSD
+	},
+	["WARLORDS"] = {
+		"Imperial_Army_Trooper_Company",
+		"AT_ST_Company",
+		"TIE_Crawler_Company",
+		"Imperial_AT_AT_Walker_Company",
+		"Executor_Star_Dreadnought", --SSD
 	},
 	["EMPIREOFTHEHAND"] = {
-		"Reward_Chaf_Destroyer",
-		"Reward_Chiss_Star_Destroyer",
-		"Reward_Peltast",
-		"Reward_Phalanx_Trooper_Squad",
-		"Reward_Flame_Tank_Company",
-	},
-	["CORPORATE_SECTOR"] = {
-		"Zsinj_Ship_Market", --
-		"SLIROUPGRADE", --
-		"Reward_Recusant",
-		"Reward_Invincible_Cruiser",
-		"Reward_Lucrehulk_CSA",
-		"Reward_CSA_B1_Droid_Squad",
-	},
-	["HUTT_CARTELS"] = {
-		"Voracious_Carrier", --
-		"TEUBBOUPGRADE", --
-		"Reward_Barabbula_Frigate",
-		"Reward_Karagga_Destroyer",
-		"Reward_Vontor_Destroyer",
-		"Reward_DorBulla_Warship",
-	},
-	["HAPES_CONSORTIUM"] = {
-		"Reward_Flare",
-		"Reward_Pulsar",
-		"Reward_Terephon_Cruiser",
-		"Reward_Hapan_LightTank_Company",
-		"Reward_Hapan_HeavyTank_Company",
-	},
-	["REBEL"] = {
-		"Reward_MC30c",
-		"Reward_Calamari_Cruiser",
-		"Reward_MC80B",
-		"Reward_Rebel_Marine_Squad",
-		"Reward_Rebel_T3B_Company",
-	},
-	["UNDERWORLD"] = {},
-	["WARLORDS"] = {},
-	["CORELLIA"] = {
-		"Reward_Proficient",
 	},
 	["CHISS"] = {
-		"Reward_Fruoro",
-		"Reward_Syndic_Destroyer",
 	},
-	["SSIRUUVI_IMPERIUM"] = {
-		"Reward_SsiRuuk_Soldier_Squad",
-		"Reward_Shree_Cruiser",
+	["CORELLIA"] = {
 	},
-	["KILLIK_HIVES"] = {},
-	["MANDALORIANS"] = {},
-	["YEVETHA"] = {
-		"Reward_Generic_Aramadia",
-		"Reward_Yevetha_Infantry_Squad",
-		"Reward_Yevethan_Plex_Squad",
+	["CORPORATE_SECTOR"] = {
+		"Lucrehulk_CSA",
 	},
 	["INDEPENDENT_FORCES"] = {
-		"Reward_Super_Transport_XI_Modified",
-		"Reward_Military_Soldier_Team",
+	},
+	["HUTT_CARTELS"] = {
+	},
+	["HAPES_CONSORTIUM"] = {
+	},
+	["REBEL"] = {
+		"Home_One_Type",
+		"Viscount_Star_Defender", --SSD
+	},
+	["UNDERWORLD"] = {},
+	["KILLIK_HIVES"] = {
+	},
+	["SSIRUUVI_IMPERIUM"] = {
+	},
+	["MANDALORIANS"] = {
+	},
+	["YEVETHA"] = {
+		"Imperial_AT_TE_Walker_Company",
+		"Acclamator_II",
+		"Aramadia_Star_Dreadnought", --SSD
 	},
 
-	--Optional text describing the reward units
+	---Optional text describing the reward units
 	["REWARD_TEXT"] = {
-		["EMPIRE"] = {
+		["EMPIRE"] = { -- Galactic Empire
+			"Stormtrooper Platoon",
+			"AT-ST/A Walker Company",
+			"\"Deathhawk\" Combat Airspeeder Wing",
+			"Turbolaser Refit AT-AT Walker",
+			"Lancer Frigate",
 			"Vindicator Heavy Cruiser",
+			"Interdictor Star Destroyer",
 			"Impellor Carrier",
 			"Compellor Battlecruiser",
-			"Stormtrooper Platoon",
-			"AT-ST Walker Company",
-			'"Deathhawk" Combat Airspeeder Wing',
-			"AT-AT Walker Company"
 		},
-		["PENTASTAR"] = {
-			-- "Enforcer Picket Ship",
+		["PENTASTAR"] = { -- Pentastar Alignment
+			"Enforcer Trooper Platoon",
+			"AT-DP Walker Company",
+			"Nemesis-class Gunship",
+			"C-10 Siege Tower",
+			"Victory-II Frigate",
 			"Venator Star Destroyer",
 			"Secutor Star Destroyer",
 			"Praetor Carrier Battlecruiser",
 			"Mandator-III Star Dreadnought",
-			"Executor Star Dreadnought, Reaper [ Pellaeon's Regime Leader Upgrade ]",
-			"Enforcer Trooper Platoon",
-			"AT-DP Walker Company",
-			"TIE Crawler Company",
-			"C-10 Siege Tower",
 		},
-		["GREATER_MALDROOD"] = {
+		["GREATER_MALDROOD"] = { -- Greater Maldrood
 			"Crimson Victory-II Star Destroyer",
-			"Tector Star Destroyer",
-			"Altor Replenishment Ship",
-			"Bellator Star Dreadnought",
 			"Navy Commando Platoon",
 			"Infantry Support Platform Company",
 			"2-M Repulsor Tank Company",
 			"Heavy Recovery Vehicle Company",
+			"Customs Light Corvette",
+			"Broadside Cruiser",
+			"Tector Star Destroyer",
+			"Altor Replenishment Ship",
+			"Bellator Star Dreadnought",
 		},
-		["ZSINJ_EMPIRE"] = {
-			"Aggressor Star Destroyer",
-			"Sorannan Star Destroyer",
-			"Vengeance Star Dreadnought",
+		["ZSINJ_EMPIRE"] = { -- Zsinj's Empire
 			"EVO Trooper Platoon",
 			"Repulsor Scout Company",
 			"Imperial APC Company",
 			"Tracked Shield Disabler Company",
+			"Vengeance Frigate",
+			"Dragon Heavy Cruiser",
+			"Aggressor Star Destroyer",
+			"Sorannan Star Destroyer",
+			"Vengeance Star Dreadnought",
 		},
-		["ERIADU_AUTHORITY"] = {
-			"Gladiator-I Star Destroyer",
-			"Torpedo Sphere",
-			"Assertor Star Dreadnought",
-			"Executor Star Dreadnought, Knight Hammer [ Daala's Regime Leader Upgrade ]",
+		["ERIADU_AUTHORITY"] = { -- Eriadu Authority
 			"Army Special Missions Platoon",
 			"AT-MP Walker Company",
 			"1-M Repulsortank Company",
 			"Lancet Wing",
+			"Arquitens Light Cruiser",
+			"Gladiator-I Star Destroyer",
+			"Torpedo Sphere",
+			"Praetor-II Battlecruiser",
+			"Assertor Star Dreadnought",
 		},
-		["EMPIREOFTHEHAND"] = {
-			"Chaf Destroyer",
-			"Chiss Star Destroyer",
-			"Peltast Star Destroyer",
-			"Phalanx Trooper Platoon",
-			"Flame Tank Company",
+		["WARLORDS"] = { -- Minor Warlords
+			"Army Trooper Platoon",
+			"AT-ST Walker Company",
+			"TIE Crawler Company",
+			"AT-AT Walker",
+			"Executor Star Dreadnought",
 		},
-		["CORPORATE_SECTOR"] = {
-			"Recusant Light Destroyer",
-			"Invincible Cruiser",
+		["EMPIREOFTHEHAND"] = { -- Empire of the Hand
+		},
+		["CHISS"] = { -- Chiss Ascendancy
+		},
+		["CORELLIA"] = { -- Corellians
+		},
+		["CORPORATE_SECTOR"] = { -- Corporate Sector Authority
 			"Lucrehulk Battle Carrier",
-			"B1 Battle Droid Squad",
 		},
-		["HUTT_CARTELS"] = {
-			"Barabbula Frigate",
-			"Kossak Frigate",
-			"Vontor Destroyer",
-			"Dor'bulla Warship",
+		["INDEPENDENT_FORCES"] = { -- Independent Forces
 		},
-		["HAPES_CONSORTIUM"] = {
-			"Flare Corvette",
-			"Pulsar Cruiser",
-			"Terephon Cruiser",
-			"Water Dragon-M Hovertank Company",
-			"Fire Dragon Hovertank Company",
+		["HUTT_CARTELS"] = { -- Hutt Cartels
 		},
-		["REBEL"] = {
-			"MC30c Frigate",
-			"MC80 Liberty Cruiser",
-			"MC80B Cruiser",
-			"Marine Platoon",
-			"T3-B Tracked Tank Company",
+		["HAPES_CONSORTIUM"] = { -- Hapes Consortium
 		},
-		["CORELLIA"] = {
-			"Proficient Light Cruiser",
+		["REBEL"] = { -- New Republic
+			"MC80 Home One Type Cruiser",
+			"Viscount Star Defender",
 		},
-		["CHISS"] = {
-			"Fruoro Picket Ship",
-			"Syndic Destroyer",
+		["UNDERWORLD"] = { -- Yuuzhan Vong
 		},
-		["SSIRUUVI_IMPERIUM"] = {
-			"Ssi-Ruuk Soldier Platoon",
-			"Shree Battle Cruiser",
+		["KILLIK_HIVES"] = { -- Killik Hives
 		},
-		["YEVETHA"] = {
+		["SSIRUUVI_IMPERIUM"] = { -- Ssi-Ruuvi Imperium
+		},
+		["MANDALORIANS"] = { -- Mandalorian Clans
+		},
+		["YEVETHA"] = { -- Duskhan League
+			"AT-TE Walker",
+			"Acclamator-II Cruiser",
 			"Aramadia Star Dreadnought",
-			"Yevethan Soldier Platoon",
-			"Yevethan Rocket Company",
-		},
-		["INDEPENDENT_FORCES"] = {
-			"Modified Super Transport XI",
-			"Local Military Platoon",
 		},
 	},
 }

@@ -8,11 +8,17 @@ require("eawx-util/StoryUtil")
 require("eawx-util/UnitUtil")
 require("UnitSwitcherLibrary")
 require("eawx-util/Sort")
+require("eawx-plugins/government-manager/LegitimacyManager")
+require("eawx-plugins/government-manager/GroupSelector")
 CONSTANTS = ModContentLoader.get("GameConstants")
 
 ---@class GovernmentEmpire
 GovernmentEmpire = class()
 
+---@param gc GalacticConquest
+---@param absorb integer
+---@param dark_empire_available boolean
+---@param id string
 function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.id = id
 
@@ -38,10 +44,20 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
 
     self.StartingEmpires = 0
     self.LegitimacyAbsorb = 3
-    if absorb then
+    if absorb and absorb > 0 then
         self.LegitimacyAbsorb = absorb
     end
 
+    ---@class (exact) LegitimacyReward
+    ---@field unlocks string[]
+    ---@field text string
+    ---@field name string
+    ---@field movie string
+    ---@field unlocked boolean
+    ---@field documentation string[]
+    ---@field extra_dummy string?
+
+    ---@type LegitimacyReward[][]
     self.legitimacy_groups = require("eawx-mod-icw/LegitimacyRewardLibrary")
     self.legitimacy_documentation = {}
 
@@ -61,105 +77,14 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.DarkEmpireRequireIntegrations = 2
     self.DarkEmpirePlanetBasedOnly = false
 
-    self.imperial_table = {
-        ["EMPIRE"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {"Imperial_Stormtrooper_Company"},
-            destruction_unlock_descs = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_STORMTROOPER"},
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 2
-        },
-        ["PENTASTAR"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {"Pellaeon_Reaper_Dummy"},
-            destruction_unlock_descs = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_PELLAEON_REAPER"},
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 1
-        },
-        ["GREATER_MALDROOD"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {"Crimson_Victory_II_Star_Destroyer"},
-            destruction_unlock_descs = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_CCVSD"},
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 1
-        },
-        ["ZSINJ_EMPIRE"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {"Defiler_Company"},
-            destruction_unlock_descs = {},
-            zann_unlocked = false,
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 1
-        },
-        ["ERIADU_AUTHORITY"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {"Daala_Knight_Hammer_Dummy"},
-            destruction_unlock_descs = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_DAALA_KNIGHT_HAMMER"},
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 1
-        },
-        ["IMPERIAL_PROTEUS"] = {
-            legitimacy = 25,
-            controls_planets = false,
-            percentile_legitimacy = 0,
-            factions_integrated = 0,
-            pending_integration = false,
-            is_integrated = false,
-            next_tier = 1,
-            failed_rolls = 0,
-            max_unlocked = false,
-            joined_groups = {},
-            destruction_unlocks = {},
-            destruction_unlock_descs = {},
-            heroes_killed_since_last_roll = 0,
-            integrate_value = 1
-        },
-    }
+    require("ImperialTables")
+    ---@type ImperialTables
+    local tables = GetImperialTables()
+
+    --Always part of Imperial legitimacy system.
+    ---  imperial_table = {["FACTION"] = {...}}
+    ---@type table<string, ImperialTable>
+    self.imperial_table = tables.imperial_table or {}
 
     self.human_is_imperial = false
     for faction_name, _ in pairs(self.imperial_table) do
@@ -168,62 +93,20 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
         end
     end
 
-    --SSD heroes who are leaders do not need to be on this list
-    self.leader_table = {
-        -- Green Empire leaders
-        ["PESTAGE_TEAM"] = {"SATE_PESTAGE"},
-        ["YSANNE_ISARD_TEAM"] = {"YSANNE_ISARD"},
-        "HISSA_MOFFSHIP",
-        "THRAWN_CHIMAERA",
-        "FLIM_TIERCE_IRONHAND",
+    --SSD heroes who are leaders do not need to be on this list.
+    ---  leader_table = {"SPACE_HERO", ["HERO_TEAM"] = {"GROUND_HERO"}}
+    ---@type table<integer, string> | table<string, string[]>
+    self.leader_table = tables.leader_table or {}
 
-        -- Pentastar leaders
-        ["ARDUS_KAINE_TEAM"] = {"ARDUS_KAINE"},
+    --SSD heroes need to be on *this* list whether or not they are leaders.
+    ---  hero_ssd_table = {["HERO"] = "TEXT"}
+    ---@type table<string, string>
+    self.hero_ssd_table = tables.hero_ssd_table or {}
 
-        -- Greater Maldrood leaders
-        "TREUTEN_13X",
-        "TREUTEN_CRIMSON_SUNRISE",
-        "KOSH_LANCET",
-
-        -- Zsinj's Empire leaders
-        "ZSINJ_IRON_FIST_VSD",
-
-        -- Eriadu Authority leaders
-        "DELVARDUS_BRILLIANT",
-        "DELVARDUS_THALASSA",
-
-        -- Legitimacy winner leaders
-        ["EMPEROR_PALPATINE_TEAM"] = {"EMPEROR_PALPATINE"},
-        ["CARNOR_JAX_TEAM"] = {"CARNOR_JAX"},
-        "DAALA_GORGON",
-        "PELLAEON_CHIMAERA_GRAND"
-    }
-
-    --SSD heroes need to be on *this* list whether or not they are leaders
-    self.hero_ssd_table = {
-        ["ISARD_LUSANKYA"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_ISARD",
-        ["CRONUS_NIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_CRONUS_NIGHT_HAMMER",
-        ["DELVARDUS_NIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_DELVARDUS",
-        ["DAALA_KNIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_DAALA",
-        ["PELLAEON_REAPER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_PELLAEON_REAPER",
-        ["PELLAEON_MEGADOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_PELLAEON_MEGADOR",
-        ["ROGRISS_DOMINION"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_ROGRISS_DOMINION",
-        ["KAINE_REAPER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_KAINE",
-        ["SYSCO_VENGEANCE"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_SYSCO_VENGEANCE",
-        ["ZSINJ_IRON_FIST_EXECUTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_ZSINJ",
-        ["RASLAN_RAZORS_KISS"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_RASLAN_RAZORS_KISS",
-        ["DROMMEL_GUARDIAN"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_DROMMEL",
-        ["GRUNGER_AGGRESSOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_GRUNGER",
-        ["GRONN_ACULEUS"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_GRONN",
-        ["BALAN_JAVELIN"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_BALAN",
-        ["KIEZ_WHELM"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_KIEZ",
-        ["COMEG_BELLATOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_COMEG",
-        ["X1_EXECUTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_X1",
-        ["THORN_ASSERTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_THORN",
-    }
-
+    ---@type string[]
     self.dead_leader_table = {}
 
+    ---@type table<string, integer>
     self.planet_values = {
         ["BASTION"] = 3,
         ["CARIDA"] = 5,
@@ -256,10 +139,25 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
         crossplot:subscribe("UPDATE_GOVERNMENT", self.UpdateDisplay, self)
     end
 
+    ---@type table<string, Observable>
     self.Events = {}
     self.Events.FactionIntegrated = Observable()
-end
 
+    -- Submod extension events needed for Legitimacy Manager
+    self.Events.InitializedLegitimacy = Observable()
+    self.Events.HighestLegitimacyChanged = Observable()
+    self.Events.FactionAbsorbed = Observable()
+    self.Events.AllGroupsClaimed = Observable()
+    self.Events.FactionBecameImperial = Observable()
+
+    ---Legitimacy Manager extension for on-demand integration and legitimacy updates
+    ---@type LegitimacyManager
+    self.LegitimacyManager = LegitimacyManager(self, gc, id)
+
+    ---Group Selector extension for alternative group system
+    ---@type GroupSelector
+    self.GroupSelector = GroupSelector(self, gc)
+end
 
 function GovernmentEmpire:set_absorb(newvalue)
     self.LegitimacyAbsorb = newvalue
@@ -343,6 +241,56 @@ function GovernmentEmpire:proteus_init(leaders)
     self.ProteusInited = true
 end
 
+---Initialize legitimacy for a specific faction (used when adding or resetting).
+---Moved from initialize_legitimacy() for reuse.
+---@param faction_name string
+function GovernmentEmpire:init_faction_legitimacy(faction_name)
+    if not self.imperial_table[faction_name] then
+        return
+    end
+    if true then -- Tab to keep diff cleaner
+
+        local added_legitimacy = EvaluatePerception("Planet_Ownership", Find_Player(faction_name))
+
+        if added_legitimacy == nil then
+            return
+        end
+
+        if added_legitimacy > 0 then
+            self.imperial_table[faction_name].controls_planets = true
+            self.StartingEmpires = self.StartingEmpires + 1
+        end
+
+        --Needs to be one under the value, since one point already comes from initial count.
+        for planet_name, value in pairs(self.planet_values) do
+            if TestValid(FindPlanet(planet_name)) and (FindPlanet(planet_name).Get_Owner() == Find_Player(faction_name)) then
+                added_legitimacy = added_legitimacy + value - 1
+            end
+        end
+
+        self.imperial_table[faction_name].legitimacy = self.imperial_table[faction_name].legitimacy + added_legitimacy
+
+        --[[
+        if not (self.id == "FTGU" or GlobalValue.Get("PROGRESSIVE_INFINITY")) then
+            for faction, stats in pairs(self.imperial_table) do
+                if faction_name ~= faction then
+                    UnitUtil.SetLockList(faction_name, stats.destruction_unlocks, false)
+                end
+            end
+        end
+        --]]
+
+        if self.imperial_table[faction_name].controls_planets == false then
+            self.imperial_table[faction_name].legitimacy = 0
+        end
+
+        -- Determine highest legitimacy after initialization
+        if self.imperial_table[faction_name].legitimacy > self.imperial_table[self.HighestLegitimacy].legitimacy then
+            self.HighestLegitimacy = faction_name
+        end
+    end
+end
+
 function GovernmentEmpire:initialize_legitimacy()
     --Logger:trace("entering GovernmentEmpire:initialize_legitimacy")
 
@@ -352,6 +300,8 @@ function GovernmentEmpire:initialize_legitimacy()
 
     self.StartingEmpires = 0
     for faction_name, _ in pairs(self.imperial_table) do
+        -- Moved to reusable helper. self:init_faction_legitimacy(faction_name)
+        -- Don't use here because of EvaluatePerception returing nil, even with identical code. Race condition?
 
         local added_legitimacy = EvaluatePerception("Planet_Ownership", Find_Player(faction_name))
 
@@ -375,8 +325,9 @@ function GovernmentEmpire:initialize_legitimacy()
 
         if not (self.id == "FTGU" or GlobalValue.Get("PROGRESSIVE_INFINITY")) then
             for faction, stats in pairs(self.imperial_table) do
-                if faction_name ~= faction then
-                    UnitUtil.SetLockList(faction_name, stats.destruction_unlocks, false)
+                if faction_name ~= faction and stats.destruction_unlocks[1] then
+                    -- Only lock the first integration reward
+                    UnitUtil.SetLockList(faction_name, {stats.destruction_unlocks[1]}, false)
                 end
             end
         end
@@ -507,10 +458,14 @@ function GovernmentEmpire:initialize_legitimacy()
     crossplot:unsubscribe("INITIALIZE_AI", self.initialize_legitimacy, self)
 
     self.inited = true
+
+    self.Events.InitializedLegitimacy:notify()
 end
 
 function GovernmentEmpire:update()
     --Logger:trace("entering GovernmentEmpire:Update")
+
+    self.LegitimacyManager:update()
 
     self:process_pending_integrations()
 
@@ -575,6 +530,8 @@ function GovernmentEmpire:process_pending_integrations()
 
             self.imperial_table[victim_name].pending_integration = false
             self.imperial_table[victim_name].is_integrated = true
+
+            self.Events.FactionAbsorbed:notify(victim_name, self.HighestLegitimacy)
         end
     end
 end
@@ -654,13 +611,16 @@ function GovernmentEmpire:on_planet_owner_changed(planet, new_owner_name, old_ow
                 end
             end
 
+            local no_group = false
             if self.imperial_table[old_owner_name] then
-                self:adjust_legitimacy(old_owner_name, -value)
+                no_group = self.imperial_table[old_owner_name].integrated_by_option
+
+                self:adjust_legitimacy(old_owner_name, -value, no_group)
             end
 
             if self.imperial_table[new_owner_name] then
                 if self.ProteusInited or new_owner_name ~= "IMPERIAL_PROTEUS" then --Don't let Proteus get rolls for their setup
-                    self:adjust_legitimacy(new_owner_name, value)
+                    self:adjust_legitimacy(new_owner_name, value, no_group)
                 end
             end
         end
@@ -669,7 +629,10 @@ function GovernmentEmpire:on_planet_owner_changed(planet, new_owner_name, old_ow
     self:check_for_integration(old_owner_name)
 end
 
-function GovernmentEmpire:check_for_integration(old_owner_name)
+---@param old_owner_name string
+---@param bypass boolean? If true, bypass planet threshold and leader checks
+---@param hide_speech boolean? If true, don't show integration speech
+function GovernmentEmpire:check_for_integration(old_owner_name, bypass, hide_speech)
     if not self.imperial_table[old_owner_name] then
         return
     end
@@ -698,17 +661,24 @@ function GovernmentEmpire:check_for_integration(old_owner_name)
         return
     end
 
-    if EvaluatePerception("Planet_Ownership", Find_Player(old_owner_name)) > self.LegitimacyAbsorb then
-        return
-    end
+    if not bypass then
+        if EvaluatePerception("Planet_Ownership", Find_Player(old_owner_name)) > self.LegitimacyAbsorb then
+            return
+        end
 
-    if self:faction_has_living_leaders(old_owner_name) then
-        return
+        if self:faction_has_living_leaders(old_owner_name) then
+            return
+        end
     end
 
     StoryUtil.ChangeAIPlayer(old_owner_name, "None")
 
-    if self.LegitimacyAbsorb > 0 or table.getn(self.imperial_table[old_owner_name].destruction_unlocks) > 0 then
+    if hide_speech then
+        local faction_name = Find_Player(old_owner_name).Get_Name()
+        local color = CONSTANTS.FACTION_COLORS[faction_name]
+        StoryUtil.ShowScreenText("Integration of "..faction_name.." initiated", 7, nil, color)
+
+    elseif self.LegitimacyAbsorb > 0 or table.getn(self.imperial_table[old_owner_name].destruction_unlocks) > 0 then
         if GlobalValue.Get("GOV_EMP_DISABLE_MULTIMEDIA_HOLO") == 1 then
             StoryUtil.Multimedia("TEXT_GOVERNMENT_LEGITIMACY_ABSORB_SPEECH_"..tostring(old_owner_name), 15, nil, nil, 0, nil, {r = 255, g = 255, b = 100})
             GlobalValue.Set("GOV_EMP_DISABLE_MULTIMEDIA_HOLO", 0)
@@ -718,6 +688,8 @@ function GovernmentEmpire:check_for_integration(old_owner_name)
     end
 
     self.imperial_table[old_owner_name].pending_integration = true
+
+    self.LegitimacyManager:lock_legitimacy_options(old_owner_name)
 end
 
 function GovernmentEmpire:on_production_finished(planet, game_object_type_name)
@@ -773,6 +745,8 @@ function GovernmentEmpire:dark_empire_unlock(faction_name)
                 --this space intentionally left blank
             elseif data.pending_integration == true then
                 --this space intentionally left blank
+            elseif not CONSTANTS.ALL_FACTIONS_CAPITALS[faction].STRUCTURE then
+                --temp fix for missing capitals causing crash
             elseif table.getn(runner_up) == 0 then
                 runner_up = {faction,data.legitimacy}
             elseif data.legitimacy > runner_up[2] then
@@ -861,7 +835,10 @@ function GovernmentEmpire:check_leader_dead(hero_team_name)
     return false
 end
 
-function GovernmentEmpire:adjust_legitimacy(faction_name, added_legitimacy)
+---@param faction_name string
+---@param added_legitimacy integer
+---@param no_group boolean?
+function GovernmentEmpire:adjust_legitimacy(faction_name, added_legitimacy, no_group)
     --Logger:trace("entering GovernmentEmpire:adjust_legitimacy")
 
     local old_legitimacy = self.imperial_table[faction_name].legitimacy
@@ -871,6 +848,12 @@ function GovernmentEmpire:adjust_legitimacy(faction_name, added_legitimacy)
     end
 
     if self.imperial_table[faction_name].legitimacy > self.imperial_table[self.HighestLegitimacy].legitimacy then
+		-- Publish event for highest legitimacy change
+		self.Events.HighestLegitimacyChanged:notify({
+			old_highest = self.HighestLegitimacy,
+			new_highest = faction_name
+		})
+
         self.HighestLegitimacy = faction_name
     end
 
@@ -879,6 +862,11 @@ function GovernmentEmpire:adjust_legitimacy(faction_name, added_legitimacy)
     end
 
     self:calculate_percentile_legitimacy()
+
+    -- LM: Optionally skip group roll
+    if no_group then
+        return
+    end
 
     if old_legitimacy >= self.imperial_table[faction_name].legitimacy then
         return
@@ -920,8 +908,19 @@ function GovernmentEmpire:calculate_percentile_legitimacy()
     end
 end
 
-function GovernmentEmpire:group_joins(faction_name)
+---@param faction_name string
+---@param hide_holo boolean?
+function GovernmentEmpire:group_joins(faction_name, hide_holo)
     --Logger:trace("entering GovernmentEmpire:group_joins")
+    if not self.imperial_table[faction_name] or self.is_all_groups_claimed then
+        return
+    end
+
+    -- Block random groups if in selectable mode
+    if self.GroupSelector.selectable_mode then
+        return
+    end
+
     local level = self.imperial_table[faction_name].next_tier
     if self.imperial_table[faction_name].max_unlocked == true then
         level = GameRandom.Free_Random(1, 4)
@@ -940,28 +939,72 @@ function GovernmentEmpire:group_joins(faction_name)
         end
     end
 
+    local search_start_level = level -- To loop around if needed
     while table.getn(self.legitimacy_groups[level]) == 0 do
         level = level - 1
         if level == 0 then
+            level = 5 -- try from max level
+        end
+        if level == search_start_level then
+            self.is_all_groups_claimed = true
+            self.Events.AllGroupsClaimed:notify()
             return
         end
     end
     local group_number = GameRandom.Free_Random(1, table.getn(self.legitimacy_groups[level]))
 
-    UnitUtil.SetLockList(faction_name, self.legitimacy_groups[level][group_number].unlocks)
+    local group = self.legitimacy_groups[level][group_number]
+    self:unlock_group(faction_name, group, level, hide_holo)
 
-    if self.legitimacy_groups[level][group_number].text == "TEXT_GOVERNMENT_LEGITIMACY_GROUP_TAGGE" then
+    table.remove(self.legitimacy_groups[level], group_number)
+    if level == 5 then
+        self.imperial_table[faction_name].max_unlocked = true
+    end
+    if self.imperial_table[faction_name].next_tier < 5 then
+        self.imperial_table[faction_name].next_tier = self.imperial_table[faction_name].next_tier + 1
+    end
+end
+
+---Moved from group_joins() to allow unlocking specific groups.
+---@param faction_name string
+---@param group LegitimacyReward
+---@param level integer? 
+---@param hide_holo boolean?
+function GovernmentEmpire:unlock_group(faction_name, group, level, hide_holo)
+    if not self.imperial_table[faction_name] or not group then
+        return
+    end
+
+    table.insert(self.imperial_table[faction_name].joined_groups, group.unlocks[1])
+    table.insert(self.imperial_table[faction_name].joined_groups_detail, group) --So unused groups can be transfered later
+
+    UnitUtil.SetLockList(faction_name, group.unlocks)
+    if group.extra_dummy then
+        UnitUtil.SetLockList(faction_name, {group.extra_dummy})
+        UnitUtil.SetLockList(faction_name, {group.unlocks[1]}, false)
+    end
+
+    if group.text == "TEXT_GOVERNMENT_LEGITIMACY_GROUP_TAGGE" then
         UnitUtil.SetLockList("CORPORATE_SECTOR", {
             "DUMMY_RECRUIT_GROUP_TAGGE_CSA"
         }, false)
     end
 
     if Find_Player(faction_name).Is_Human() then
-        if GlobalValue.Get("GOV_EMP_DISABLE_MULTIMEDIA_HOLO") == 1 then
-            StoryUtil.Multimedia(self.legitimacy_groups[level][group_number].text, 15, nil, nil, 0)
-              GlobalValue.Set("GOV_EMP_DISABLE_MULTIMEDIA_HOLO", 0)
+        if hide_holo or GlobalValue.Get("GOV_EMP_DISABLE_MULTIMEDIA_HOLO") == 1 then
+            StoryUtil.Multimedia(group.text, 10, nil, nil, 0)
+            GlobalValue.Set("GOV_EMP_DISABLE_MULTIMEDIA_HOLO", 0)
         else
-            StoryUtil.Multimedia(self.legitimacy_groups[level][group_number].text, 15, nil, self.legitimacy_groups[level][group_number].movie, 0)
+            StoryUtil.Multimedia(group.text, 15, nil, group.movie, 0)
+        end
+    else
+        local message = Find_Player(faction_name).Get_Name().." recieved %s"
+        local color = CONSTANTS.FACTION_COLORS[faction_name]
+        local object_type = Find_Object_Type(group.unlocks[1])
+        if object_type then
+            StoryUtil.ShowScreenText(message, 15, object_type, color)
+        else
+            StoryUtil.ShowScreenText("Warning: Missing object type for group".. group.name, 30, nil, {r = 244, g = 200, b = 0})
         end
     end
     -- StoryUtil.ShowScreenText(faction_name, 15)
@@ -969,20 +1012,16 @@ function GovernmentEmpire:group_joins(faction_name)
     --     joined = Find_Player(faction_name)
     -- }
 
-    local index = self.legitimacy_groups[level][group_number].name
+    if not level then
+        return
+    end
+
+    local index = group.name
     for _,docentry in pairs(self.legitimacy_documentation[level]) do
         if index == docentry.name then
             docentry.state = " / [ " .. CONSTANTS.ALL_FACTION_NAMES[string.upper(faction_name)] .. " ]"
             break
         end
-    end
-    table.insert(self.imperial_table[faction_name].joined_groups, self.legitimacy_groups[level][group_number].unlocks[1])
-    table.remove(self.legitimacy_groups[level], group_number)
-    if level == 5 then
-        self.imperial_table[faction_name].max_unlocked = true
-    end
-    if self.imperial_table[faction_name].next_tier < 5 then
-        self.imperial_table[faction_name].next_tier = self.imperial_table[faction_name].next_tier + 1
     end
 end
 
@@ -1036,14 +1075,23 @@ end
 
 function GovernmentEmpire:UpdateDisplay()
     --Logger:trace("entering GovernmentEmpire:UpdateDisplay")
+    --[[
     if self.human_is_imperial ~= true then
         return
     end
+    --]]
 
     local plot = Get_Story_Plot("Conquests\\Player_Agnostic_Plot.xml")
-    local government_display_event = plot.Get_Event("Government_Display")
+    local display_plot_name = self.LegitimacyManager:get_display_plot_name()
+    local government_display_event = plot.Get_Event(display_plot_name)
 
+    -- Clear previous dialog text if human is an original imperial
+    if self.human_is_imperial then
     government_display_event.Clear_Dialog_Text()
+    else
+        government_display_event.Add_Dialog_Text("TEXT_NONE")
+        government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
+    end
 
     government_display_event.Set_Reward_Parameter(1, self.PlayerHuman.Get_Faction_Name())
 
@@ -1115,6 +1163,12 @@ function GovernmentEmpire:UpdateDisplay()
 
             government_display_event.Add_Dialog_Text("TEXT_DOCUMENTATION_BODY_SEPARATOR")
         end
+    end
+
+    -- Early exit if human is not an original imperial and has not become an imperial
+    if not self.human_is_imperial and not self.LegitimacyManager.human_became_imperial then
+        self.LegitimacyManager:update_story_event()
+        return
     end
 
     government_display_event.Add_Dialog_Text("TEXT_NONE")
@@ -1252,6 +1306,12 @@ function GovernmentEmpire:UpdateDisplay()
     government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_4")
     government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_5")
     government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_EMPIRE_TIER_SPECIAL_REWARD_6")
+
+    -- Handle story event trigger for non original imperials
+    if not self.human_is_imperial and self.LegitimacyManager.human_became_imperial then
+        self.LegitimacyManager:update_story_event()
+        return
+    end
 
     Story_Event("GOVERNMENT_DISPLAY")
 end

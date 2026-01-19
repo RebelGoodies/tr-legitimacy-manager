@@ -3,6 +3,7 @@
 ---@field controls_planets boolean
 ---@field percentile_legitimacy integer
 ---@field factions_integrated integer
+---@field pending_integration boolean
 ---@field is_integrated boolean
 ---@field next_tier integer
 ---@field failed_rolls integer
@@ -30,6 +31,7 @@ function StarterImperialTable(rewards, reward_text)
 		controls_planets = false,
 		percentile_legitimacy = 0,
 		factions_integrated = 0,
+		pending_integration = false,
 		is_integrated = false,
 		next_tier = 1,
 		failed_rolls = 0,
@@ -45,156 +47,167 @@ function StarterImperialTable(rewards, reward_text)
 end
 
 ---Returns tables needed for GovernmentEmpire.lua
----@return table<string, table>
+---@return ImperialTables
 function GetImperialTables()
 	-- Custom destruction unlock lists
 	local success, rewards = pcall(require, "IntegrationRewards")
 	if not success then
 		rewards = {
 			-- Defaults
-			["EMPIRE"] = {"Imperial_Stormtrooper_Squad"},
-			["PENTASTAR"] = {"PellaeonUpgrade"},
-			["GREATER_MALDROOD"] = {"Crimson_Victory"},
-			["ZSINJ_EMPIRE"] = {"Imperial_Defiler_Squad"},
-			["ERIADU_AUTHORITY"] = {"DaalaUpgrade"},
+			["EMPIRE"] = {"Imperial_Stormtrooper_Company"},
+			["PENTASTAR"] = {"Pellaeon_Reaper_Dummy"},
+			["GREATER_MALDROOD"] = {"Crimson_Victory_II_Star_Destroyer"},
+			["ZSINJ_EMPIRE"] = {"Defiler_Company"},
+			["ERIADU_AUTHORITY"] = {"Daala_Knight_Hammer_Dummy"},
+			["IMPERIAL_PROTEUS"] = {},
 		}
 	end
 
-	-- Custom or Default reward text
+	---Custom or Default reward text
+	---@type table<string, string[]>
 	reward_text = rewards["REWARD_TEXT"] or {
 		["EMPIRE"] = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_STORMTROOPER"},
 		["PENTASTAR"] = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_PELLAEON_REAPER"},
 		["GREATER_MALDROOD"] = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_CCVSD"},
+		["ZSINJ_EMPIRE"] = {},
 		["ERIADU_AUTHORITY"] = {"TEXT_GOVERNMENT_EMPIRE_INTEGRATION_REWARD_DAALA_KNIGHT_HAMMER"},
+		["IMPERIAL_PROTEUS"] = {},
 	}
 
+	---@class (exact) ImperialTables
+	---@field imperial_table table<string, ImperialTable>
+	---@field leader_table table<integer, string> | table<string, string[]>
+	---@field hero_ssd_table table<string, string>
+	---@field add_imperial_options table<string, ImperialTable>
+	---@field dark_empire_units string[]
+	---@field base_imperial_units string[]
 	local tables = {
 		---Always part of the Imperial legitimacy system
 		---@type table<string, ImperialTable>
-		imperial_table = {
-			["EMPIRE"] = StarterImperialTable(rewards["EMPIRE"], reward_text["EMPIRE"]),
-			["PENTASTAR"] = StarterImperialTable(rewards["PENTASTAR"], reward_text["PENTASTAR"]),
-			["GREATER_MALDROOD"] = StarterImperialTable(rewards["GREATER_MALDROOD"], reward_text["GREATER_MALDROOD"]),
-			["ZSINJ_EMPIRE"] = StarterImperialTable(rewards["ZSINJ_EMPIRE"], reward_text["ZSINJ_EMPIRE"]),
-			["ERIADU_AUTHORITY"] = StarterImperialTable(rewards["ERIADU_AUTHORITY"], reward_text["ERIADU_AUTHORITY"]),
-		},
+		imperial_table = {},
 
-		---Added to Imperial legitimacy system if option selected
-		---@type table<string, ImperialTable>
-		add_imperial_options = {
-			["EMPIREOFTHEHAND"] = StarterImperialTable(rewards["EMPIREOFTHEHAND"], reward_text["EMPIREOFTHEHAND"]),
-			["CORPORATE_SECTOR"] = StarterImperialTable(rewards["CORPORATE_SECTOR"], reward_text["CORPORATE_SECTOR"]),
-			["WARLORDS"] = StarterImperialTable(rewards["WARLORDS"], reward_text["WARLORDS"]),
-			["CORELLIA"] = StarterImperialTable(rewards["CORELLIA"], reward_text["CORELLIA"]),
-			["CHISS"] = StarterImperialTable(rewards["CHISS"], reward_text["CHISS"]),
-			["SSIRUUVI_IMPERIUM"] = StarterImperialTable(rewards["SSIRUUVI_IMPERIUM"], reward_text["SSIRUUVI_IMPERIUM"]),
-			["KILLIK_HIVES"] = StarterImperialTable(rewards["KILLIK_HIVES"], reward_text["KILLIK_HIVES"]),
-			["MANDALORIANS"] = StarterImperialTable(rewards["MANDALORIANS"], reward_text["MANDALORIANS"]),
-			["YEVETHA"] = StarterImperialTable(rewards["YEVETHA"], reward_text["YEVETHA"]),
-			["INDEPENDENT_FORCES"] = StarterImperialTable(rewards["INDEPENDENT_FORCES"], reward_text["INDEPENDENT_FORCES"]),
-			["HUTT_CARTELS"] = StarterImperialTable(rewards["HUTT_CARTELS"], reward_text["HUTT_CARTELS"]),
-			["HAPES_CONSORTIUM"] = StarterImperialTable(rewards["HAPES_CONSORTIUM"], reward_text["HAPES_CONSORTIUM"]),
-			["REBEL"] = StarterImperialTable(rewards["REBEL"], reward_text["REBEL"]),
-			--["UNDERWORLD"] = StarterImperialTable(rewards["UNDERWORLD"], reward_text["UNDERWORLD"]),
-		},
-		
 		---SSD heroes who are leaders do not need to be on this list
-		---@type table<integer|string, string|string[]>
+		---@type table<integer, string> | table<string, string[]>
 		leader_table = {
 			-- Green Empire leaders
-			["PESTAGE_TEAM"] = {"SATE_PESTAGE"}, ["YSANNE_ISARD_TEAM"] = {"YSANNE_ISARD"},
-			"HISSA_MOFFSHIP", "HISSA_MOFFSHIP_NO_TRANSITION", "THRAWN_CHIMAERA", "FLIM_TIERCE_IRONHAND",
-			-- Green Empire heroes with warlord trait
-			"HARRSK_WHIRLWIND", "HARRSK_SHOCKWAVE", "KRENNEL_WARLORD", "NORYM_KIM_BLOOD_GAINS", "TETHYS_CALLOUS",
-			["SHARGAEL_TEAM"] = {"SHARGAEL_AT_TE"},
-			
+			["PESTAGE_TEAM"] = {"SATE_PESTAGE"},
+			["YSANNE_ISARD_TEAM"] = {"YSANNE_ISARD"},
+			"HISSA_MOFFSHIP",
+			"THRAWN_CHIMAERA",
+			"FLIM_TIERCE_IRONHAND",
+
 			-- Pentastar leaders
-			["JEREC_TEAM"] = {"JEREC"}, ["ARDUS_KAINE_TEAM"] = {"ARDUS_KAINE"},
-			
+			["ARDUS_KAINE_TEAM"] = {"ARDUS_KAINE"},
+
 			-- Greater Maldrood leaders
-			"TREUTEN_13X", "TREUTEN_CRIMSON_SUNRISE", "KOSH_LANCET",
-			
+			"TREUTEN_13X",
+			"TREUTEN_CRIMSON_SUNRISE",
+			"KOSH_LANCET",
+
 			-- Zsinj's Empire leaders
 			"ZSINJ_IRON_FIST_VSD",
-			-- Zsinj's Empire heroes with warlord trait
-			"SCREED_DEMOLISHER", "SLAGORTH_ARC",
-			["TYBER_ZANN_TEAM"] = {"TYBER_ZANN"},
-			["TYBER_ZANN_TEAM2"] = {"TYBER_ZANN2"},
-			
-			-- Eriadu Authority leaders
-			"DELVARDUS_THALASSA", "DELVARDUS_BRILLIANT",
-			
-			-- EOTH leaders
-			"THRAWN_GREY_WOLF", "THRAWN_CLONE_EVISCERATOR", "NIRIZ_ADMONITOR",
-			
-			-- Legitimacy group heroes with warlord trait
-			"DELURIN_GALAXY_DRAGON", "NICLARA_PULSARS_REVENGE", "PRENTIOCH_PRENTIOCH", "LANKIN_KNIGHT", "YZU_CONSTITUTION", "BRANDL_ISD",
-			["NIVERS_TEAM"] = {"NIVERS_AT_AT_WALKER"}, ["GANN_TEAM"] = {"GANN_JUGGERNAUT_A6"}, ["FOGA_BRILL_TEAM"] = {"FOGA_BRILL"}, ["JAALIB_TEAM"] = {"JAALIB"}, ["GRAZZ_TEAM"] = {"GRAZZ_AT_AT_WALKER"},
-			-- Legacy of War
-			"SARNE_RAPTOR", ["HETHRIR_TEAM"] = {"HETHRIR"}, ["DEVIAN_TEAM"] = {"ENNIX_DEVIAN"},
-			
-			-- Legitimacy winner leaders
-			["EMPEROR_PALPATINE_TEAM"] = {"EMPEROR_PALPATINE"}, ["CARNOR_JAX_TEAM"] = {"CARNOR_JAX"}, 
-			"DAALA_GORGON", "PELLAEON_GRAND_CHIMAERA",
 
-			-- Hutt Cartel leaders (used in Zsinj custom integrations)
-			["SMEBBA_DUNK_TEAM"] = {"SMEBBA_DUNK"}, ["BOSSATO_TEAM"] = {"BOSSATO"},
+			-- Eriadu Authority leaders
+			"DELVARDUS_BRILLIANT",
+			"DELVARDUS_THALASSA",
+
+			-- Legitimacy winner leaders
+			["EMPEROR_PALPATINE_TEAM"] = {"EMPEROR_PALPATINE"},
+			["CARNOR_JAX_TEAM"] = {"CARNOR_JAX"},
+			"DAALA_GORGON",
+			"PELLAEON_CHIMAERA_GRAND"
 		},
 		
 		---SSD heroes need to be on *this* list whether or not they are leaders
 		---@type table<string, string>
 		hero_ssd_table = {
 			["ISARD_LUSANKYA"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_ISARD",
-			["LUSANKYA_NO_TRANSITION"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_ISARD",
-			["NIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_CRONUS_NIGHT_HAMMER",
+			["CRONUS_NIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_CRONUS_NIGHT_HAMMER",
 			["DELVARDUS_NIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_DELVARDUS",
 			["DAALA_KNIGHT_HAMMER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_DAALA",
 			["PELLAEON_REAPER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_PELLAEON_REAPER",
 			["PELLAEON_MEGADOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_PELLAEON_MEGADOR",
 			["ROGRISS_DOMINION"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_ROGRISS_DOMINION",
 			["KAINE_REAPER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_KAINE",
-			["VENGEANCE_JEREC"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_SYSCO_VENGEANCE",
+			["SYSCO_VENGEANCE"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_SYSCO_VENGEANCE",
 			["ZSINJ_IRON_FIST_EXECUTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_LEADER_ZSINJ",
-			["RAZORS_KISS"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_RASLAN_RAZORS_KISS",
+			["RASLAN_RAZORS_KISS"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_RASLAN_RAZORS_KISS",
 			["DROMMEL_GUARDIAN"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_DROMMEL",
 			["GRUNGER_AGGRESSOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_GRUNGER",
 			["GRONN_ACULEUS"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_GRONN",
+			["BALAN_JAVELIN"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_BALAN",
 			["KIEZ_WHELM"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_KIEZ",
-			["DANGOR_JAVELIN"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_DANGOR",
-			["WRATH_ASSERTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_WRATH",
-			["VANTO_DESTINY"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_VANTO",
-			["RAX_RAVAGER"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_RAX",
+			["COMEG_BELLATOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_COMEG",
+			["X1_EXECUTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_WARLORD_X1",
+			["THORN_ASSERTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_THORN",
 		},
+
+		---Added to Imperial legitimacy system if option selected
+		---@type table<string, ImperialTable>
+		add_imperial_options = {},
 
 		---For factions in add_imperial_options if they get dark empire
 		---@type string[]
 		dark_empire_units = {
-			"Reward_Eclipse_Star_Destroyer",
-            "Reward_Sovereign",
-            "Reward_MTC_Sensor",
-            "Reward_MTC_Support",
-            "Reward_TaggeCo_HQ",
-            "Reward_Hunter_Killer_Probot",
-            "Reward_Imperial_XR85_Company",
-            "Reward_Imperial_Chrysalide_Company",
-            "Reward_Imperial_Dark_Jedi_Squad",
-            "Reward_Imperial_Dark_Stormtrooper_Squad",
-            "Reward_Imperial_Compforce_Assault_Squad",
+            "Eclipse_Star_Dreadnought",
+            "Sovereign_Star_Dreadnought",
+            "MTC_Sensor",
+            "MTC_Support",
+            "TaggeCo_HQ",
+            "Hunter_Killer_Probot",
+            "XR85_Company",
+            "Imperial_Chrysalide_Company",
+            "Imperial_Dark_Jedi_Company",
+            "Dark_Stormtrooper_Company",
+            "Compforce_Assault_Company",
+            -- "Xecr_Nist_Dark_Side_Location_Set",
 		},
 
 		---For factions in add_imperial_options if they become Imperial
 		---@type string[]
 		base_imperial_units = {
-			"Reward_Generic_Victory_Destroyer_Two",
-			"Reward_Generic_Star_Destroyer",
+			"Victory_I_Star_Destroyer",
+			"Imperial_I_Star_Destroyer",
 			"U_Ground_Advanced_Vehicle_Factory",
-			"Reward_Imperial_B5_Juggernaut_Company",
+			"Imperial_A5_Juggernaut_Company",
 		}
 	}
+
+	-- Init imperial_table
+	for _, faction in pairs({
+		"EMPIRE",
+		"PENTASTAR",
+		"GREATER_MALDROOD",
+		"ZSINJ_EMPIRE",
+		"ERIADU_AUTHORITY",
+		"IMPERIAL_PROTEUS",
+	}) do
+		tables.imperial_table[faction] = StarterImperialTable(rewards[faction], reward_text[faction])
+	end
 
 	--Special cases
 	tables.imperial_table["EMPIRE"].integrate_value = 2
 	tables.imperial_table["ZSINJ_EMPIRE"].zann_unlocked = false
+
+	-- Init add_imperial_options
+	for _, faction in pairs({
+		"CORELLIA",
+		"CORPORATE_SECTOR",
+		"EMPIREOFTHEHAND",
+		"CHISS",
+		"WARLORDS",
+		"INDEPENDENT_FORCES",
+		"HUTT_CARTELS",
+		"HAPES_CONSORTIUM",
+		"REBEL",
+		--"UNDERWORLD",
+		"KILLIK_HIVES",
+		"SSIRUUVI_IMPERIUM",
+		"MANDALORIANS",
+		"YEVETHA",
+	}) do
+		tables.add_imperial_options[faction] = StarterImperialTable(rewards[faction], reward_text[faction])
+	end
 
 	return tables
 end

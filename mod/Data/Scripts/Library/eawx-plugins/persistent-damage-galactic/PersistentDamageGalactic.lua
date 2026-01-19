@@ -26,39 +26,45 @@ function PersistentDamageGalactic:update()
 		if table.getn(objects) > 0 then
 			for _,object in pairs(objects) do
 				local p_owner = object.Get_Owner()
-				if p_owner ~= nil then
-					local unit_globalvalue = object_name.."_"..p_owner.Get_Faction_Name()
-					local unit_globalvalue_value = GlobalValue.Get(unit_globalvalue)
-					if unit_globalvalue_value == nil then
-						GlobalValue.Set(unit_globalvalue,100)
-						unit_globalvalue_value = 100
-					end
-					local current_health = unit_globalvalue_value
+				self:repair_unit(object_name, p_owner, repair_data)
+			end
+		end
+	end
+end
 
-					if current_health < 100 then
-						local heal_amt = repair_data.AMOUNT
-						if heal_amt == nil then
-							heal_amt = 10 --default 10% repair per cycle
-						end
-						local heal_fee = repair_data.COST
-						if heal_fee == nil then
-							heal_fee = -tonumber(Dirty_Floor(Find_Object_Type(object_name).Get_Build_Cost() * heal_amt / 200)) --default 2% repair for 1% cost
-						end
-						local short_name = self.display_name_library[object_name]
+function PersistentDamageGalactic:repair_unit(object_name, p_owner, repair_data)
+	if not object_name or not p_owner or not repair_data then
+		return
+	end
 
-						if p_owner.Get_Credits() >= heal_fee then
-							local new_health = current_health + heal_amt
-							if new_health >= self.autoheal_threshold then
-								new_health = 100
-							end
-							GlobalValue.Set(unit_globalvalue,new_health)
-							p_owner.Give_Money(heal_fee)
-							if p_owner.Is_Human() then
-								crossplot:publish("GALACTIC_SSD_REPAIRED", short_name, new_health, heal_fee)
-							end
-						end
-					end
-				end
+	local unit_globalvalue = object_name.."_"..p_owner.Get_Faction_Name()
+	local unit_globalvalue_value = GlobalValue.Get(unit_globalvalue)
+	if unit_globalvalue_value == nil then
+		GlobalValue.Set(unit_globalvalue,100)
+		unit_globalvalue_value = 100
+	end
+	local current_health = unit_globalvalue_value
+
+	if current_health < 100 then
+		local heal_amt = repair_data.AMOUNT
+		if heal_amt == nil then
+			heal_amt = 10 --default 10% repair per cycle
+		end
+		local heal_fee = repair_data.COST
+		if heal_fee == nil then
+			heal_fee = -tonumber(Dirty_Floor(Find_Object_Type(object_name).Get_Build_Cost() * heal_amt / 200)) --default 2% repair for 1% cost
+		end
+		local short_name = self.display_name_library[object_name]
+
+		if p_owner.Get_Credits() >= heal_fee then
+			local new_health = current_health + heal_amt
+			if new_health >= self.autoheal_threshold then
+				new_health = 100
+			end
+			GlobalValue.Set(unit_globalvalue,new_health)
+			p_owner.Give_Money(heal_fee)
+			if p_owner.Is_Human() then
+				crossplot:publish("GALACTIC_SSD_REPAIRED", short_name, new_health, heal_fee)
 			end
 		end
 	end
