@@ -18,6 +18,11 @@ function GroupSelector:new(GovEmpire, gc)
     self.HumanPlayer = Find_Player("local")
     self.human_faction = self.HumanPlayer.Get_Faction_Name()
 
+    ---Groups locked by time restrictions, only available in selectable mode
+    ---Mirrors GovEmpire.legitimacy_groups structure
+    ---@type LegitimacyReward[][]
+    self.time_locked_groups = {{}, {}, {}, {}, {}}
+
     -- Track which system is active
     self.selectable_mode = false
 
@@ -68,6 +73,9 @@ function GroupSelector:new(GovEmpire, gc)
     self.all_groups_claimed_event = GovEmpire.Events.AllGroupsClaimed
     self.all_groups_claimed_event:attach_listener(self.on_all_groups_claimed, self)
 
+    self.group_time_locked_event = GovEmpire.Events.GroupTimeLocked
+    self.group_time_locked_event:attach_listener(self.on_group_time_locked, self)
+
     self.faction_became_imperial_event = GovEmpire.Events.FactionBecameImperial
     self.faction_became_imperial_event:attach_listener(self.on_faction_became_imperial, self)
 
@@ -88,6 +96,7 @@ function GroupSelector:destroy()
     self.init_event:detach_listener(self.on_init, self)
     -- self.faction_absorbed_event:detach_listener(self.on_faction_absorbed, self) -- Keep to handle Zann absorption
     self.all_groups_claimed_event:detach_listener(self.on_all_groups_claimed, self)
+    self.group_time_locked_event:detach_listener(self.on_group_time_locked, self)
     self.faction_became_imperial_event:detach_listener(self.on_faction_became_imperial, self)
 end
 
@@ -109,16 +118,26 @@ function GroupSelector:get_group_hire(group)
     return string.upper(hire_dummy)
 end
 
----Get the total count of groups for a tier
+---Get the total count of regular and time-locked groups for a tier
 ---@param level integer the level (1-5)
+---@param include_time_locked boolean? defaults to selectable_mode state
 ---@return integer total_count sum of available legitimacy group
-function GroupSelector:get_tier_group_count(level)
+function GroupSelector:get_tier_group_count(level, include_time_locked)
+    if include_time_locked == nil then
+        include_time_locked = self.selectable_mode
+    end
+
     local regular_count = 0
     if self.GovEmpire.legitimacy_groups[level] then
         regular_count = table.getn(self.GovEmpire.legitimacy_groups[level])
     end
 
-    return regular_count
+    local time_locked_count = 0
+    if include_time_locked and self.time_locked_groups[level] then
+        time_locked_count = table.getn(self.time_locked_groups[level])
+    end
+
+    return regular_count + time_locked_count
 end
 
 ---Call from GovernmentEmpire:initialize_legitimacy()
@@ -157,6 +176,17 @@ function GroupSelector:on_all_groups_claimed()
     local message = "No more legitimacy groups available. All groups unlocked."
     StoryUtil.ShowScreenText(message, 15, nil, {r = 200, g = 244, b = 0})
     self:destroy()
+end
+
+---Call from GovernmentEmpire:initialize_legitimacy when a group is time-locked
+function GroupSelector:on_group_time_locked(level, group)
+    if group["maxstartyear"] or group["minstartyear"] then
+        -- StoryUtil.ShowScreenText(group.name, 7, nil, {r = 200, g = 200, b = 100})
+        table.insert(self.time_locked_groups[level], group)
+    else
+        local message = "Error: "..group.name.." marked as time-locked."
+        StoryUtil.ShowScreenText(message, 15, nil, {r = 255, g = 64, b = 64})
+    end
 end
 
 -- Call from LegitimacyManager when a faction becomes imperial
@@ -296,6 +326,13 @@ function GroupSelector:set_lock_tier_hires(level, lock_status)
     for _, group in ipairs(self.GovEmpire.legitimacy_groups[level]) do
         UnitUtil.SetLockList(self.human_faction, {self:get_group_hire(group)}, lock_status)
     end
+
+    -- In selectable mode, also include time-locked groups
+    if self.selectable_mode then
+        for _, group in ipairs(self.time_locked_groups[level]) do
+            UnitUtil.SetLockList(self.human_faction, {self:get_group_hire(group)}, lock_status)
+        end
+    end
     return true
 end
 
@@ -391,6 +428,20 @@ function GroupSelector:check_group_hire_built(object_type_name)
 
             -- Check if this is the hire that was built and unlock
             if object_type_name == hire_name then
+                self.GovEmpire:unlock_group(self.human_faction, group, level, true)
+                return true
+            end
+        end
+    end
+
+    -- Also search time-locked groups in selectable mode
+    for level, groups_list in pairs(self.time_locked_groups) do
+        for _, group in ipairs(groups_list) do
+            local hire_name = self:get_group_hire(group)
+
+            -- Check if this is the hire that was built and unlock
+            if object_type_name == hire_name then
+                StoryUtil.ShowScreenText(group.name, 10, nil, {r = 100, g = 255, b = 100})
                 self.GovEmpire:unlock_group(self.human_faction, group, level, true)
                 return true
             end

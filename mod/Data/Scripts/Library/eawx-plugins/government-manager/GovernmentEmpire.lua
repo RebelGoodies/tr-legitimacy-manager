@@ -148,6 +148,7 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.Events.HighestLegitimacyChanged = Observable()
     self.Events.FactionAbsorbed = Observable()
     self.Events.AllGroupsClaimed = Observable()
+    self.Events.GroupTimeLocked = Observable()
     self.Events.FactionBecameImperial = Observable()
 
     ---Legitimacy Manager extension for on-demand integration and legitimacy updates
@@ -421,6 +422,9 @@ function GovernmentEmpire:initialize_legitimacy()
             if maxstart then
                 if year > maxstart then
                     doc_entry.state = " / [ Locked ]"
+                    if not removegroup then -- Selectable mode only
+                        self.Events.GroupTimeLocked:notify(index, entry)
+                    end
                     removegroup = true
                 end
             end
@@ -428,6 +432,9 @@ function GovernmentEmpire:initialize_legitimacy()
             if minstart then
                 if year < minstart then
                     doc_entry.state = " / [ Locked ]"
+                    if not removegroup then -- Selectable mode only
+                        self.Events.GroupTimeLocked:notify(index, entry)
+                    end
                     removegroup = true
                 end
             end
