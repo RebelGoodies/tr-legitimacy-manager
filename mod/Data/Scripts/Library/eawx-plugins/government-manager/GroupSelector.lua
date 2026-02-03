@@ -275,7 +275,7 @@ function GroupSelector:unlock_available_tier_options()
     for level, option_name in pairs(self.tier_options) do
         if level ~= self.current_unlocked_level then
             -- Only unlock if tier has groups available
-            if self:get_tier_group_count(level) then
+            if self:get_tier_group_count(level) > 0 then
                 UnitUtil.SetLockList(self.human_faction, {option_name}, true)
             end
         end
@@ -316,9 +316,9 @@ function GroupSelector:set_lock_tier_hires(level, lock_status)
     end
 
     -- Check if there are groups available in this tier
-    if self:get_tier_group_count(level) <= 0 then
+    if lock_status and self:get_tier_group_count(level) <= 0 then
         local message = string.format("Tier %d has no available groups.", level)
-        StoryUtil.ShowScreenText(message, 7, nil, {r = 255, g = 200, b = 100})
+        UnitUtil.SetLockList(self.human_faction, {self.tier_options[level]}, false)
         return false
     end
 
@@ -328,10 +328,8 @@ function GroupSelector:set_lock_tier_hires(level, lock_status)
     end
 
     -- In selectable mode, also include time-locked groups
-    if self.selectable_mode then
-        for _, group in ipairs(self.time_locked_groups[level]) do
-            UnitUtil.SetLockList(self.human_faction, {self:get_group_hire(group)}, lock_status)
-        end
+    for _, group in ipairs(self.time_locked_groups[level]) do
+        UnitUtil.SetLockList(self.human_faction, {self:get_group_hire(group)}, lock_status)
     end
     return true
 end
@@ -358,6 +356,7 @@ function GroupSelector:select_tier_group_hires(level)
 
     -- Unlock all group HIRES in this level (not the actual groups)
     if not self:set_lock_tier_hires(level, true) then
+        self:unlock_available_tier_options()
         return
     end
 
