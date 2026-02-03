@@ -423,12 +423,13 @@ end
 function GroupSelector:check_group_hire_built(object_type_name)
     -- Search all tiers for matching group hire
     for level, groups_list in pairs(self.GovEmpire.legitimacy_groups) do
-        for _, group in ipairs(groups_list) do
+        for i, group in ipairs(groups_list) do
             local hire_name = self:get_group_hire(group)
 
             -- Check if this is the hire that was built and unlock
             if object_type_name == hire_name then
                 self.GovEmpire:unlock_group(self.human_faction, group, level, true)
+                table.remove(self.GovEmpire.legitimacy_groups[level], i)
                 return true
             end
         end
@@ -436,13 +437,14 @@ function GroupSelector:check_group_hire_built(object_type_name)
 
     -- Also search time-locked groups in selectable mode
     for level, groups_list in pairs(self.time_locked_groups) do
-        for _, group in ipairs(groups_list) do
+        for i, group in ipairs(groups_list) do
             local hire_name = self:get_group_hire(group)
 
             -- Check if this is the hire that was built and unlock
             if object_type_name == hire_name then
                 StoryUtil.ShowScreenText(group.name, 10, nil, {r = 100, g = 255, b = 100})
                 self.GovEmpire:unlock_group(self.human_faction, group, level, true)
+                table.remove(self.time_locked_groups[level], i)
                 return true
             end
         end
