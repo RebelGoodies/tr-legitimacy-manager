@@ -174,14 +174,14 @@ end
 ---Call from GovernmentEmpire:group_joins()
 function GroupSelector:on_all_groups_claimed()
     local message = "No more legitimacy groups available. All groups unlocked."
-    StoryUtil.ShowScreenText(message, 15, nil, {r = 200, g = 244, b = 0})
+    StoryUtil.ShowScreenText(message, 15, nil, {r = 200, g = 255, b = 0})
     self:destroy()
 end
 
 ---Call from GovernmentEmpire:initialize_legitimacy when a group is time-locked
 function GroupSelector:on_group_time_locked(level, group)
     if group["maxstartyear"] or group["minstartyear"] then
-        -- StoryUtil.ShowScreenText(group.name, 7, nil, {r = 200, g = 200, b = 100})
+        -- StoryUtil.ShowScreenText(group.name, 7, nil, {r = 200, g = 200, b = 64})
         table.insert(self.time_locked_groups[level], group)
     else
         local message = "Error: "..group.name.." marked as time-locked."
@@ -246,7 +246,7 @@ function GroupSelector:enable_selectable_mode()
     self:unlock_available_tier_options()
 
     local message = "Group selection mode enabled. Use the tier options to select specific groups."
-    StoryUtil.ShowScreenText(message, 7, nil, {r = 100, g = 255, b = 100})
+    StoryUtil.ShowScreenText(message, 7, nil, {r = 64, g = 255, b = 64})
 end
 
 ---Disable selectable mode: lock tier options, unblock random groups
@@ -256,7 +256,7 @@ function GroupSelector:disable_selectable_mode()
     self:set_lock_random_group_options(true)
 
     local message = "Random group mode enabled. Groups will be randomly assigned through legitimacy gains."
-    StoryUtil.ShowScreenText(message, 7, nil, {r = 255, g = 255, b = 100})
+    StoryUtil.ShowScreenText(message, 7, nil, {r = 255, g = 255, b = 64})
 end
 
 ---Lock all tier options and reset current unlocked tier
@@ -311,13 +311,14 @@ end
 ---@return boolean success whether the operation was successful
 function GroupSelector:set_lock_tier_hires(level, lock_status)
     if lock_status and not self.selectable_mode then
-        StoryUtil.ShowScreenText("Error: Not in selectable mode.", 7, nil, {r = 255, g = 100, b = 100})
+        StoryUtil.ShowScreenText("Error: Not in selectable mode.", 7, nil, {r = 255, g = 64, b = 64})
         return false
     end
 
     -- Check if there are groups available in this tier
     if lock_status and self:get_tier_group_count(level) <= 0 then
         local message = string.format("Tier %d has no available groups.", level)
+        StoryUtil.ShowScreenText(message, 7, nil, {r = 255, g = 200, b = 0})
         UnitUtil.SetLockList(self.human_faction, {self.tier_options[level]}, false)
         return false
     end
@@ -369,7 +370,7 @@ function GroupSelector:select_tier_group_hires(level)
 
     local hires_available = self:get_tier_group_count(level)
     local message = string.format("Tier %d has %d groups available to hire.", level, hires_available)
-    StoryUtil.ShowScreenText(message, 10, nil, {r = 100, g = 255, b = 100})
+    StoryUtil.ShowScreenText(message, 10, nil, {r = 64, g = 255, b = 64})
 end
 
 ---Check if a random option was built and assign groups accordingly
@@ -441,7 +442,7 @@ function GroupSelector:check_group_hire_built(object_type_name)
 
             -- Check if this is the hire that was built and unlock
             if object_type_name == hire_name then
-                StoryUtil.ShowScreenText(group.name, 10, nil, {r = 100, g = 255, b = 100})
+                StoryUtil.ShowScreenText(group.name, 10, nil, {r = 64, g = 255, b = 64})
                 self.GovEmpire:unlock_group(self.human_faction, group, level, true)
                 table.remove(self.time_locked_groups[level], i)
                 return true
