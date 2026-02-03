@@ -73,6 +73,8 @@ function GroupSelector:new(GovEmpire, gc)
 
     -- Handle Extra_Dummy Swaps (Compatibility Workaround)
     ExtraSwap(gc)
+
+    self:setup_extra_group_dummies()
 end
 
 ---Disable the GroupSelector and detach event listeners
@@ -126,7 +128,6 @@ function GroupSelector:on_init()
     end
     self.initialized = true
 
-    self:setup_extra_group_dummies()
     self:disable_selectable_mode()
     self:set_lock_toggle_option(true)
 end
