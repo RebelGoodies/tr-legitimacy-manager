@@ -107,6 +107,18 @@ function GroupSelector:get_group_hire(group)
     return string.upper(hire_dummy)
 end
 
+---Get the total count of groups for a tier
+---@param level integer the level (1-5)
+---@return integer total_count sum of available legitimacy group
+function GroupSelector:get_tier_group_count(level)
+    local regular_count = 0
+    if self.GovEmpire.legitimacy_groups[level] then
+        regular_count = table.getn(self.GovEmpire.legitimacy_groups[level])
+    end
+
+    return regular_count
+end
+
 ---Call from GovernmentEmpire:initialize_legitimacy()
 function GroupSelector:on_init()
     if self.initialized then
@@ -232,9 +244,7 @@ function GroupSelector:unlock_available_tier_options()
     for level, option_name in pairs(self.tier_options) do
         if level ~= self.current_unlocked_level then
             -- Only unlock if tier has groups available
-            if self.GovEmpire.legitimacy_groups[level] and
-               table.getn(self.GovEmpire.legitimacy_groups[level]) > 0
-            then
+            if self:get_tier_group_count(level) then
                 UnitUtil.SetLockList(self.human_faction, {option_name}, true)
             end
         end
@@ -275,9 +285,7 @@ function GroupSelector:set_lock_tier_hires(level, lock_status)
     end
 
     -- Check if there are groups available in this tier
-    if not self.GovEmpire.legitimacy_groups[level] or
-       table.getn(self.GovEmpire.legitimacy_groups[level]) == 0
-    then
+    if self:get_tier_group_count(level) <= 0 then
         local message = string.format("Tier %d has no available groups.", level)
         StoryUtil.ShowScreenText(message, 7, nil, {r = 255, g = 200, b = 100})
         return false
@@ -322,7 +330,7 @@ function GroupSelector:select_tier_group_hires(level)
     UnitUtil.SetLockList(self.human_faction, {self.tier_options[level]}, false)
     self:unlock_available_tier_options()
 
-    local hires_available = table.getn(self.GovEmpire.legitimacy_groups[level])
+    local hires_available = self:get_tier_group_count(level)
     local message = string.format("Tier %d has %d groups available to hire.", level, hires_available)
     StoryUtil.ShowScreenText(message, 10, nil, {r = 100, g = 255, b = 100})
 end
