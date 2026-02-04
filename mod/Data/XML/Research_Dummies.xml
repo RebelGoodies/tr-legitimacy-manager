@@ -3375,6 +3375,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_One | Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3397,6 +3403,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_One | Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3474,6 +3486,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_One | Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_One | Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_One | Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_One | Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_One | Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_One | Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_One | EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_One | Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_One | CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3531,6 +3549,7 @@
 			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3558,6 +3577,7 @@
 			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3585,6 +3605,7 @@
 			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3607,6 +3628,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3629,6 +3656,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3650,6 +3683,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3671,6 +3710,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Two | Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Two | Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Two | Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3698,6 +3743,7 @@
 			Greater_Maldrood_Shipyard_Level_Two | Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Two | Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Two | Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Two | Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Two | EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Two | CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Two | Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3727,6 +3773,7 @@
 			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3754,6 +3801,7 @@
 			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3775,6 +3823,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Three | Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Three | Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Three | Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3802,6 +3856,7 @@
 			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3829,6 +3884,7 @@
 			Greater_Maldrood_Shipyard_Level_Three | Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Three | Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Three | Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Three | Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Three | EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Three | CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Three | Hutt_Shipyard_Level_Four |
@@ -3852,6 +3908,12 @@
 			Hapes_Consortium, Rebel, Underworld, Killik_Hives, SsiRuuvi_Imperium, Mandalorians, Yevetha
 		</Affiliation>
 		<Required_Special_Structures>
+			Empire_Shipyard_Level_Four |
+			Pentastar_Shipyard_Level_Four |
+			Greater_Maldrood_Shipyard_Level_Four |
+			Zsinj_Shipyard_Level_Four | Rancor_Base |
+			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			Chiss_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
@@ -3879,6 +3941,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -3906,6 +3969,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -3933,6 +3997,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -3960,6 +4025,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -3987,6 +4053,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4014,6 +4081,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4041,6 +4109,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4070,6 +4139,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4097,6 +4167,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4126,6 +4197,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4153,6 +4225,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4180,6 +4253,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4207,6 +4281,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4234,6 +4309,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4261,6 +4337,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
@@ -4288,6 +4365,7 @@
 			Greater_Maldrood_Shipyard_Level_Four |
 			Zsinj_Shipyard_Level_Four | Rancor_Base |
 			Eriadu_Shipyard_Level_Four |
+			Imperial_Proteus_Shipyard_Level_Four |
 			EotH_Shipyard_Level_Four |
 			CSA_Shipyard_Level_Four | CSA_Ship_Market |
 			Hutt_Shipyard_Level_Four |
