@@ -28,6 +28,7 @@ Manage the imperial legitimacy system at any time through the *Advanced Options 
 **Selectable mode:**
 - Pick and choose specific groups to unlock from one of the tiers.
 - This prevents the AI from receiving legitimacy groups.
+- Era locked groups are selectable.
 
 ## Integration Rewards
 
