@@ -94,15 +94,11 @@ function FighterSpawn:update()
 end
 
 function FighterSpawn:has_hangar()
+    local hasHangarFlag = false
     if self.unit_entry.Flags then
-        if self.unit_entry.Flags.HANGAR then
-            return true
-        end
+        hasHangarFlag = self.unit_entry.Flags.HANGAR
     end
-
-    local has_hangar_perception = EvaluatePerception("Has_Hangar", self.original_owner, Object)
-
-    return has_hangar_perception == 1
+    return hasHangarFlag or EvaluatePerception("Has_Hangar", self.original_owner, Object) == 1
 end
 
 function FighterSpawn:all_fighters_docked()
@@ -470,9 +466,6 @@ function FighterSpawn.spawn(wrapper)
     if entry.Reserve > 0 then
         local fighterType = Find_Object_Type(TypeString)
         local squadron = Spawn_Unit(fighterType, location, Object.Get_Owner())[1]
-		if squadron == nil then
-			StoryUtil.ShowScreenText("Cannot find type: " .. TypeString .. " for " .. self.object_name, 5, nil, {r = 244, g = 0, b = 0})
-		end
         if TestValid(Find_First_Object("ATTACKER ENTRY POSITION")) and TestValid(Find_First_Object("SCRIPTED_BATTLE_MARKER")) then
             squadron.Face_Immediate(Find_First_Object("ATTACKER ENTRY POSITION"))
         end
