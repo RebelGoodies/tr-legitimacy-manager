@@ -2,7 +2,6 @@ require("deepcore/std/class")
 require("deepcore/crossplot/crossplot")
 require("eawx-util/GalacticUtil")
 require("eawx-util/ChangeOwnerUtilities")
-require("PGSpawnUnits")
 require("TRCommands")
 require("eawx-util/StoryUtil")
 require("eawx-util/UnitUtil")
@@ -34,8 +33,6 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.Convoy_List = require("eawx-plugins/intervention-missions/ConvoyHuntTarget_Table")
     self.DarkEmpirePlanetBasedOnlyThreshold = table.getn(FindPlanet.Get_All_Planets())/2
 
-    self.PlanetTable = require("eawx-util/PlanetTable")
-
     self.StartingEmpires = 0
     self.LegitimacyAbsorb = 3
     if absorb then
@@ -49,6 +46,8 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.LowestLegitimacy = "GREATER_MALDROOD"
 
     GlobalValue.Set("IMPERIAL_REGIME_HOST", "EMPIRE")
+
+    self.PlanetTable = require("eawx-util/PlanetTable")
 
     --Dark Empire
     self.DarkEmpireAvailable = true
@@ -222,8 +221,6 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
         ["THORN_ASSERTOR"] = "TEXT_GOVERNMENT_EMPIRE_SSD_HERO_THORN",
     }
 
-    self.dead_leader_table = {}
-
     self.planet_values = {
         ["BASTION"] = 3,
         ["CARIDA"] = 5,
@@ -232,11 +229,10 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
         ["KUAT"] = 5
     }
 
+    self.dead_leader_table = {}
+
     self.galactic_hero_killed_event = gc.Events.GalacticHeroKilled
     self.galactic_hero_killed_event:attach_listener(self.on_galactic_hero_killed, self)
-
-    self.galactic_ssd_killed_event = gc.Events.GalacticSSDKilled
-    self.galactic_ssd_killed_event:attach_listener(self.on_galactic_ssd_killed, self)
 
     self.planet_owner_changed_event = gc.Events.PlanetOwnerChanged
     self.planet_owner_changed_event:attach_listener(self.on_planet_owner_changed, self)
@@ -244,7 +240,6 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
     self.production_finished_event = gc.Events.GalacticProductionFinished
     self.production_finished_event:attach_listener(self.on_production_finished, self)
 
-    crossplot:subscribe("SET_LEGITIMACY_ABSORB", self.set_absorb, self)
     crossplot:subscribe("INITIALIZE_PROTEUS_LEGITIMACY", self.proteus_init, self)
     crossplot:subscribe("INITIALIZE_AI", self.initialize_legitimacy, self)
     crossplot:subscribe("INCREASE_LEGITIMACY", self.adjust_legitimacy, self)
@@ -404,6 +399,7 @@ function GovernmentEmpire:initialize_legitimacy()
     end
 
     for index=1,table.getn(self.legitimacy_groups) do
+		local PlanetTable = require("eawx-util/PlanetTable")
         local doctable = {}
         local groups_to_remove = {}
         for i, entry in pairs(self.legitimacy_groups[index]) do
@@ -427,7 +423,7 @@ function GovernmentEmpire:initialize_legitimacy()
                         end
                         break
                     else
-                        locale[self.PlanetTable[h[1].Get_Planet_Location().Get_Type().Get_Name()]] = true
+                        locale[PlanetTable[h[1].Get_Planet_Location().Get_Type().Get_Name()]] = true
                         uselocale = true
                     end
                 end
@@ -447,7 +443,7 @@ function GovernmentEmpire:initialize_legitimacy()
                             end
                             break
                         else
-                            locale[self.PlanetTable[h.Get_Planet_Location().Get_Type().Get_Name()]] = true
+                            locale[PlanetTable[h.Get_Planet_Location().Get_Type().Get_Name()]] = true
                             uselocale = true
                         end
                     end
@@ -626,17 +622,6 @@ function GovernmentEmpire:on_galactic_hero_killed(hero_name, owner, killer)
     end
 end
 
-function GovernmentEmpire:on_galactic_ssd_killed(hero_name, owner, killer)
-    --Logger:trace("entering GovernmentEmpire:on_galactic_hero_killed")
-    for faction_name, _ in pairs(self.imperial_table) do
-        if faction_name == owner then
-            --non-hero SSDs
-            self:adjust_legitimacy(owner, -5)
-            break
-        end
-    end
-end
-
 function GovernmentEmpire:on_planet_owner_changed(planet, new_owner_name, old_owner_name)
     --Logger:trace("entering GovernmentEmpire:on_planet_owner_changed")
     if self.inited == false then
@@ -754,13 +739,13 @@ function GovernmentEmpire:tagge_handler(planet, game_object_type_name)
     self.production_finished_event:detach_listener(self.tagge_handler, self)
 end
 
-function GovernmentEmpire:dark_empire_unlock(faction_name)
+function GovernmentEmpire:dark_empire_unlock(choice_name)
     --Logger:trace("entering GovernmentEmpire:dark_empire_unlock")
     if self.DarkEmpireUnlocked == true then
         return
     end
 
-    faction_name = string.gsub(faction_name, "DARK_EMPIRE_CHEAT_CHOICE_", "")
+    local faction_name = string.gsub(choice_name, "DARK_EMPIRE_CHEAT_CHOICE_", "")
 
     self.DarkEmpireUnlocked = true
 
@@ -808,7 +793,7 @@ end
 
 function GovernmentEmpire:dark_empire_choice_made(option,ai_faction_name)
     --Logger:trace("entering GovernmentEmpire:dark_empire_choice_made")
-    local dark_empire_faction_name
+    local dark_empire_faction_name= nil
 
     if option == "DARK_EMPIRE_CHOICE_AI" then
         dark_empire_faction_name = ai_faction_name
