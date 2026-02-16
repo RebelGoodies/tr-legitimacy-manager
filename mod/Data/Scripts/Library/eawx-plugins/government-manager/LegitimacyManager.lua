@@ -1,3 +1,5 @@
+---@License: MIT
+
 require("deepcore/std/class")
 require("eawx-plugins/hero-swap/RewardSwap")
 require("eawx-plugins/tech-handler/ResearchCheat")

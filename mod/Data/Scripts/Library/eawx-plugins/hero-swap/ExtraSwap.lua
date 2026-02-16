@@ -1,11 +1,12 @@
+---@License: MIT
+
 require("deepcore/std/class")
 require("eawx-util/StoryUtil")
-require("PGStateMachine")
 require("PGSpawnUnits")
 require("UnitSwitcherLibrary")
 require("SetFighterResearch")
 
----Copy based on HeroSwap
+---Based on HeroSwap
 ---@class ExtraSwap
 ExtraSwap = class()
 
@@ -27,6 +28,8 @@ function ExtraSwap:on_production_finished(planet, object_type_name)
 		return
 	end
 	local sub_obj = string.gsub(object_type_name, "^EXTRA_", "") -- Removes "EXTRA_" from string
+
+	-- Below is the original HeroSwap code, but using sub_obj for the swap entry lookup instead of object_type_name
 
 	local swap_entry = StoryUtil.Get_Swap_Entry(sub_obj)
 
@@ -85,6 +88,7 @@ function ExtraSwap:on_production_finished(planet, object_type_name)
 	end
 end
 
+---Unlocks the reward variant for a unit if it exists.
 ---@param player PlayerObject
 ---@param unit_name string
 function ExtraSwap:unlock_reward_variant(player, unit_name)

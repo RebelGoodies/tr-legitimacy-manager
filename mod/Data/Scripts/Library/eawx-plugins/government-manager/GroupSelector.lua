@@ -1,3 +1,5 @@
+---@License: MIT
+
 require("deepcore/std/class")
 require("eawx-plugins/hero-swap/ExtraSwap")
 require("eawx-util/StoryUtil")

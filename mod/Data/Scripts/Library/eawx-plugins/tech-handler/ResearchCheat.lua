@@ -1,3 +1,5 @@
+---@License: MIT
+
 require("deepcore/std/class")
 require("eawx-util/UnitUtil")
 
