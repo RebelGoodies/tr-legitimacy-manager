@@ -45,16 +45,7 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
         self.LegitimacyAbsorb = absorb
     end
 
-    ---@class (exact) LegitimacyReward
-    ---@field unlocks string[]
-    ---@field text string
-    ---@field name string
-    ---@field movie string
-    ---@field unlocked boolean
-    ---@field documentation string[]
-    ---@field extra_dummy string?
-
-    ---@type LegitimacyReward[][]
+    ---@type LegitimacyRewardLibrary
     self.legitimacy_groups = require("eawx-mod-icw/LegitimacyRewardLibrary")
     self.legitimacy_documentation = {}
 
@@ -63,6 +54,7 @@ function GovernmentEmpire:new(gc, absorb, dark_empire_available, id)
 
     GlobalValue.Set("IMPERIAL_REGIME_HOST", "EMPIRE")
 
+    ---@type table<string, string>
     self.PlanetTable = require("eawx-util/PlanetTable")
 
     --Dark Empire

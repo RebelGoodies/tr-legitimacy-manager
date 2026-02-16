@@ -22,7 +22,7 @@ function GroupSelector:new(GovEmpire, gc)
 
     ---Groups locked by time restrictions, only available in selectable mode
     ---Mirrors GovEmpire.legitimacy_groups structure
-    ---@type LegitimacyReward[][]
+    ---@type LegitimacyRewardLibrary
     self.time_locked_groups = {{}, {}, {}, {}, {}}
 
     -- Track which system is active

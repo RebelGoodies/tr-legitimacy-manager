@@ -1,0 +1,17 @@
+---@class LegitimacyReward
+---@field unlocks string[]
+---@field text string
+---@field name string
+---@field movie string
+---@field unlocked boolean
+---@field minstartyear? integer
+---@field maxstartyear? integer
+---@field documentation string[]
+---@field extra_dummy? string -- submod
+
+---@class (exact) LegitimacyRewardLibrary
+---@field [1] LegitimacyReward[]
+---@field [2] LegitimacyReward[]
+---@field [3] LegitimacyReward[]
+---@field [4] LegitimacyReward[]
+---@field [5] LegitimacyReward[]
