@@ -14,11 +14,11 @@ return {
             local CONSTANTS = ModContentLoader.get("GameConstants")
 
             ---@type string
-            local human_fation = ctx.galactic_conquest.HumanPlayer.Get_Faction_Name()
+            local human_faction = ctx.galactic_conquest.HumanPlayer.Get_Faction_Name()
 
             -- Attach the battle_end listener for non Imperial factions
-            if CONSTANTS.ALIASES[human_fation] ~= "IMPERIAL" then
-                --StoryUtil.ShowScreenText("world_devastator_galactic_plugin_enabled", 10, nil, {r = 126, g = 192, b = 0})
+            if CONSTANTS.ALIASES[human_faction] ~= "IMPERIAL" then
+                --StoryUtil.ShowScreenText("World Devastator plugin enabled for "..human_faction, 10, nil, {r = 126, g = 192, b = 0})
                 ctx.galactic_conquest.Events.TacticalBattleEnded:attach_listener(WDG.on_battle_end, WDG)
             end
         end
